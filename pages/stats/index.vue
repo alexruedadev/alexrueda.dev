@@ -49,7 +49,7 @@
   <p class="font-semibold">Equipment</p>
   </div>
   
-  <div class="max-w-4xl mb-4 mx-4 sm:mx-auto shadow-md rounded-md overflow-hidden sm:rounded-lg border border-gray-900">
+  <div class="max-w-4xl mb-4 mx-4 sm:mx-auto shadow-md rounded-md overflow-hidden sm:rounded-lg">
     <div>
       <dl>
         <div v-for="(item, index) in $config.uses.meta" :class="index%2 === 0 ? 'bg-gray-100 dark:bg-gray-900' : 'bg-gray-200 dark:bg-gray-800'" class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 ">
@@ -79,7 +79,7 @@
     <img src="/images/onVacation.gif" alt="" class="rounded-lg justify-center">
   </div>
 <!-- codestats -->
-  <div data-aos="zoom-in" class="max-w-4xl mx-4 sm:mx-auto bg-gray-100 dark:bg-gray-800 shadow-md rounded-md overflow-hidden sm:rounded-lg border border-gray-900">
+  <div data-aos="zoom-in" class="max-w-4xl mx-4 sm:mx-auto bg-gray-100 dark:bg-gray-800 shadow-md rounded-md overflow-hidden sm:rounded-lg">
       <dl>
         <div data-aos="zoom-in" v-for="(item, index) in languages" :class="index%2 === 0 ? 'bg-gray-100 dark:bg-gray-900' : 'bg-gray-200 dark:bg-gray-800'" class="px-4 py-5 grid grid-cols-3 sm:gap-4 sm:px-6">
 
