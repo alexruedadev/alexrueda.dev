@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* header title */
+
+body #hero-title {
+    @apply text-gray-800 dark:text-gray-200;
+}
+body #section-title {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-first via-blue-medium to-blue-light
+}
+/* body #section-title {
+    from-blue-first via-blue-medium to-blue-light
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-indigo-500;
+} */
+/* Subheader title */
+
+body #section-subtitle {
+    @apply dark:text-gray-200;
+}
+
+body #section-desc {
+    @apply text-gray-400 dark:text-gray-300;
+}
+
+body #section-desc a {
+    @apply dark:text-gray-100 text-black dark:hover:text-white
+}
+
+body #liner {
+    @apply border-gray-300 dark:border-gray-700;
+}
+
+body #activity-liner {
+    @apply border-gray-300 dark:border-gray-700;
+}
+
+
+body b {
+    @apply dark:text-gray-100 text-black
+}
+
+body #nav-link {
+    @apply 
+    text-gray-700 
+    dark:text-gray-300 
+    dark:hover:text-white
+    transition duration-300
+    /* dark:bg-gray-700 */
+    /* hover:bg-gray-200; */
+  }
+
+/* body #nav-link-active.active {
+    @apply dark:text-white
+} */
+
+/* BLOG CARD */
+body #blog-card {
+    @apply bg-gray-200 dark:bg-gray-900;
+}
+
+/* POSTS */
+
+body #post-body {
+    @apply bg-gray-50 dark:bg-gray-900;
+}
+
+body #post h1, h2, h3 {
+    @apply text-gray-600 dark:text-gray-200;
+}
+
+body #post p {
+    @apply text-gray-500 dark:text-gray-300;
+}
+
+body #post a {
+    @apply text-blue-800 dark:text-blue-500 no-underline;
+}
+
+body #post td {
+    @apply text-gray-700 dark:text-gray-300
+}
+
+body #post strong {
+    @apply text-gray-800 dark:text-gray-100
+}
+
+body #post li {
+    @apply text-gray-500 dark:text-gray-300;
+}
+
+body #post-index {
+    @apply bg-gray-200 dark:bg-gray-800 rounded-lg text-sm md:w-1/2 border-separate border-l border-gray-300 dark:border-gray-700
+}
+
+body #post-index-body {
+    @apply pb-1 px-4
+}
+
+body #post-index-title {
+    @apply border-b-2 border-gray-700 text-center p-2 text-white
+}
+
+body #button-slim {
+    @apply text-white text-xs font-semibold leading-5 tracking-wide bg-gradient-to-r from-blue-first to-blue-medium rounded-full
+     
+}
