@@ -25,6 +25,8 @@ export default {
       Plaintext: {img: '/images/vuejs.svg', color: 'green-300', abr:'JS', activity: 'IDK'},
       JSON: {img: '/images/vuejs.svg', color: 'green-300', abr:'JS', activity: 'IDK'},
       HTML: {img: '/images/html5.svg', color: 'green-300', abr:'JS', activity: 'Hypertexting'},
+      DotEnv: {img: '/images/html5.svg', color: 'green-300', abr:'.env', activity: 'Enviroment'},
+      XML: {img: '/images/html5.svg', color: 'green-300', abr:'xml', activity: 'Structuring data'},
     },
   },
   studing: {
