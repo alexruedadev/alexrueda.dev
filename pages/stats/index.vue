@@ -158,6 +158,12 @@
 
 <script>
 import GitHubCalendar from 'github-calendar'
+import {
+  sortLanguagesByNewExp,
+  sortLanguagesByTotalExp,
+  getTodayExp,
+  shortSizeTo
+  } from '/utils/codestats.js';
 
 export default {
   head() {
@@ -182,64 +188,10 @@ export default {
       this.languages = this.getTodayExp(this.sortLanguagesByNewExp(languages))
       // this.skills = this.sortSizeTo(7,this.sortLanguagesByTotalExp(languages))
     },
-    /**
-     * Sort languages from higher to lower experience `new_xps`
-     * @param {*} languages fetched from https://codestats.net
-     * @returns array of objects with sorted languages.
-     */
-    sortLanguagesByNewExp(languages){
-      let result = []
-      const orderedLangs = Object.values(languages).sort((a,b)  => b.new_xps - a.new_xps)
-      for(const value in orderedLangs){
-          for (const key in languages) {
-              if(languages[key] == orderedLangs[value]){
-                  // Check if name string contains spaces and remove it.
-                  let cleanKey = key.indexOf(" ") == -1 ? cleanKey = key : cleanKey = key.replace(" ", "") 
-                  result.push({name:cleanKey, new_xps:orderedLangs[value].new_xps, xps:orderedLangs[value].xps})
-              }
-          }
-      }
-      return result
-    },
-    /**
-     * Sort languages from higher to lower experience `new_xps`
-     * @param {*} languages fetched from https://codestats.net
-     * @returns array of objects with sorted languages.
-     */
-    sortLanguagesByTotalExp(languages){
-      let result = []
-      const orderedLangs = Object.values(languages).sort((a,b)  => b.xps - a.xps)
-      for(const value in orderedLangs){
-          for (const key in languages) {
-              if(languages[key] == orderedLangs[value]){
-                  // Check if name string contains spaces and remove it.
-                  let cleanKey = key.indexOf(" ") == -1 ? cleanKey = key : cleanKey = key.replace(" ", "")
-                  result.push({name:cleanKey, new_xps:orderedLangs[value].new_xps, xps:orderedLangs[value].xps})
-              }
-          }
-      }
-      return result
-    },
-    sortSizeTo(number,array){
-        let result = []
-        for (let i = 0; i < number; i++) {
-            result[i] = array[i]
-        }
-        return result
-    },
-    /**
-     * Get only languages which today exp (new_xps) is not 0.
-     * @param {*} languages ordered from higher to lower
-     */
-    getTodayExp(languages){
-        let result = []
-        for (let i = 0; i < languages.length; i++){
-            languages[i].new_xps === 0 ? languages.splice(i, 1) : result[i] = languages[i];
-        }
-        // result = [] // -> discomment to test 'not today activity' status
-        if(result.length == 0) this.onVacation();
-        return result
-    },
+    sortLanguagesByNewExp,
+    sortLanguagesByTotalExp,
+    getTodayExp,
+    shortSizeTo,
     onVacation(){
       const onVacation = document.getElementById('onVacation')
       const liner = document.getElementById('activity-liner')
@@ -265,27 +217,27 @@ export default {
 
 /* Github Calendar Styles */
 
->>> rect.ContributionCalendar-day[data-level='0'] {
+::v-deep rect.ContributionCalendar-day[data-level='0'] {
   @apply fill-current text-gray-900;
 }
 
->>> rect.ContributionCalendar-day[data-level='1'] {
+::v-deep rect.ContributionCalendar-day[data-level='1'] {
   fill: rgb(14, 68, 41);
 }
 
->>> rect.ContributionCalendar-day[data-level='2'] {
+::v-deep rect.ContributionCalendar-day[data-level='2'] {
   fill: rgb(0, 109, 50);
 }
 
->>> rect.ContributionCalendar-day[data-level='3'] {
+::v-deep rect.ContributionCalendar-day[data-level='3'] {
   fill: rgb(38, 166, 65);
 }
 
->>> rect.ContributionCalendar-day[data-level='4'] {
+::v-deep rect.ContributionCalendar-day[data-level='4'] {
   fill: rgb(57, 211, 83);
 }
 
->>> .graph-before-activity-overview {
+::v-deep .graph-before-activity-overview {
   border: none;
 }
 
@@ -293,37 +245,37 @@ export default {
   border: none;
 }
 
-.calendar >>> .width-full > .float-right {
+.calendar ::v-deep .width-full > .float-right {
   @apply text-sm text-gray-400 flex flex-row items-center justify-center px-4;
 }
 
-.calendar >>> .width-full > .float-right svg {
+.calendar ::v-deep .width-full > .float-right svg {
   @apply mx-0.5;
 }
 
 
-.calendar >>> .width-full > .float-left {
+.calendar ::v-deep .width-full > .float-left {
   @apply flex items-center justify-center;
 }
 
-.calendar >>> .width-full > .float-left a {
+.calendar ::v-deep .width-full > .float-left a {
   @apply pl-8 text-sm text-gray-400 hover:text-indigo-500;
 }
 
->>> text.ContributionCalendar-label {
+::v-deep text.ContributionCalendar-label {
   font-size: 9px;
   @apply text-gray-500;
 }
 
->>> .contrib-column {
+::v-deep .contrib-column {
   @apply border-none;
 }
 
->>> .contrib-number {
+::v-deep .contrib-number {
   @apply text-gray-200 font-bold;
 }
 
->>> .text-muted {
+::v-deep .text-muted {
   @apply text-gray-300;
 }
 

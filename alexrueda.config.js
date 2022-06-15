@@ -58,7 +58,7 @@ export default {
     facebook: '',
     twitter: 'alexruedadev',
     instagram: 'alexrueda.dev',
-    codestats: 'alexdiple' // https://codestats.net make a profile if you dont already have one.
+    codestats: 'alexdiple'
   },
   buyMeACoffee: {
     enabled: false,

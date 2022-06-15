@@ -1,3 +1,20 @@
+---
+id: 
+title: Diagramas de clases
+image: /images/posts/
+createdAt: "2022-04-26 10:00:00"
+language: Spanish
+tags:
+  - Class
+  - Diagrams
+  - Development
+category: What is
+author:
+  name: alex
+  twitter: alexruedadev
+  image: /images/resume/perfil-animated.png
+---
+
 La navegablidad es un tipo de relación que indica que un objeto de una clase tiene la posibilidad de decidir qué clase de objeto se le asocia a otra clase de objeto.
 
 La **multiplicidad o cardinalidad** indica cuántas instancias de tipo A pueden asociarse a una de tipo B en un determinado momento. Restringe el numero de objetos de una clase que participan en la relación. [1, , 0..,0..1,1.., 5..9, 2,4,6 ]

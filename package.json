@@ -7,7 +7,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate -m"
+    "generate": "nuxt generate -m",
+    "test" : "jest"
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
@@ -47,6 +48,7 @@
     "gulp-awspublish": "^4.1.2",
     "gulp-awspublish-router": "^0.2.0",
     "gulp-cloudfront-invalidate-aws-publish": "^1.0.0",
+    "jest": "^28.1.0",
     "postcss": "^8.2.12",
     "sass": "^1.32.8",
     "sass-loader": "^10.1.1"
