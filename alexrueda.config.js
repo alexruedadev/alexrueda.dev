@@ -271,6 +271,20 @@ export default {
         header: 'Habilidades',
         subtext: 'Lenguajes y herramientas',
         description: "Estos son los lenguajes y herramientas de desarrollo que más utilizo. Y no lo digo yo, lo dice <a href='https://codestats.net/users/alexdiple'>codestats.net</a> 👈",
+        languages: {
+          html: {title:'html', level: 'medium'},
+          css: {title:'css', level: 'medium'},
+          javascript: {title:'html', level: 'medium'},
+          php: {title:'php', level: 'medium'},
+          java: {title:'java', level: 'low'},
+          python: {title:'python', level: 'low'},
+          sql: {title:'sql', level: 'low'}
+        },
+      frameworks: {
+        vue: {},
+        react: {},
+        angular: {}
+      }
       },
       currently: {
         header: 'Actualmente',
