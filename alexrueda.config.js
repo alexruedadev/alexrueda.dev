@@ -27,7 +27,40 @@ export default {
       HTML: {img: '/images/html5.svg', color: 'green-300', abr:'JS', activity: 'Hypertexting'},
       DotEnv: {img: '/images/html5.svg', color: 'green-300', abr:'.env', activity: 'Enviroment'},
       XML: {img: '/images/html5.svg', color: 'green-300', abr:'xml', activity: 'Structuring data'},
+      php: {img: '/images/html5.svg', color: 'green-300', abr:'xml', activity: 'Structuring data'},
+      java: {img: '/images/html5.svg', color: 'green-300', abr:'xml', activity: 'Structuring data'},
+      python: {img: '/images/html5.svg', color: 'green-300', abr:'xml', activity: 'Structuring data'},
+      sql: {img: '/images/html5.svg', color: 'green-300', abr:'xml', activity: 'Structuring data'},
     },
+  },
+  fullstack: {
+    languages: {
+      HTML: {img: '/images/html-pixel.png'},
+      CSS: {img:'/images/css3.svg'},
+      JavaScript: {img:'/images/js-pixel-35.png'},
+      Java: {img:'/images/java-pixel-12.png'},
+      python: {img:'/images/python.png'},
+      php: {img:'/images/php.svg'},
+    },
+    frameworks: {
+      Vue: {img: '/images/vuejs.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+      React: {img: '/images/react.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+      Angular: {img: '/images/angularjs.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+    },
+    databases: {
+      MySQL: {img: '/images/mysql.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+      MongoDB: {img: '/images/mongodb.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+      Firebase: {img: '/images/firebase.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+    },
+    design: {
+      photoshop: {img: '/images/photoshop.svg'},
+      figma: {img: '/images/figma.svg'},
+      xd: {img: '/images/xd.svg'},
+    },
+    os: {
+      windows: {img: '/images/windows.svg'},
+      linux: {img: '/images/linux.svg'},
+    }
   },
   studing: {
     header: 'studing',
@@ -272,13 +305,13 @@ export default {
         subtext: 'Lenguajes y herramientas',
         description: "Estos son los lenguajes y herramientas de desarrollo que más utilizo. Y no lo digo yo, lo dice <a href='https://codestats.net/users/alexdiple'>codestats.net</a> 👈",
         languages: {
-          html: {title:'html', level: 'medium'},
-          css: {title:'css', level: 'medium'},
-          javascript: {title:'html', level: 'medium'},
-          php: {title:'php', level: 'medium'},
-          java: {title:'java', level: 'low'},
-          python: {title:'python', level: 'low'},
-          sql: {title:'sql', level: 'low'}
+          HTML: {title:'html', level: 'medium', img: '/images/html5.svg'},
+          CSS: {title:'css', level: 'medium', img: '/images/css.svg'},
+          JavaScript: {title:'html', level: 'medium', img: '/images/js.svg'},
+          php: {title:'php', level: 'medium', img: '/images/html5.svg'},
+          java: {title:'java', level: 'low', img: '/images/html5.svg'},
+          python: {title:'python', level: 'low', img: '/images/html5.svg'},
+          sql: {title:'sql', level: 'low', img: '/images/html5.svg'}
         },
       frameworks: {
         vue: {},

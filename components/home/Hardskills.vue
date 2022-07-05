@@ -5,7 +5,7 @@
         <div id="liner" data-aos="fade-up" class="max-w-7xl mx-auto border-l border-dashed border-r p-8">
             <!-- Title and Subtitle -->
             <div class="max-w-prose text-center mx-auto py-4 pb-10">
-                <h2 id="section-title" class="dark:text-gray-200 text-3xl leading-8 font-extrabold tracking-tight m-auto py-5 sm:py-0">
+                <h2 id="section-title">
                     {{ $t('hardskills.header') }}
                 </h2>
                 <!-- <p id="section-subtitle" class="text-xs leading-6 font-semibold tracking-wide lowercase">
