@@ -28,6 +28,7 @@
     "firebase": "^8.6.7",
     "flowbite": "^1.4.4",
     "github-calendar": "^2.2.7",
+    "install": "^0.13.0",
     "nuxt": "^2.15.3",
     "nuxt-i18n": "^6.27.0",
     "pdfvuer": "^1.8.3",

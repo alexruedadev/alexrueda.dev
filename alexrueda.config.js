@@ -37,7 +37,7 @@ export default {
     languages: {
       html: {img: '/images/html-pixel.png', desc: 'Hypertext Markup Language'},
       css: {img:'/images/css3.svg', desc: 'Cascading Style Sheets'},
-      javascript: {img:'/images/js-pixel-35.png', desc: 'JavaScript programming language'},
+      javascript: {img:'/images/pixelart/js-pixel.png', desc: 'JavaScript programming language'},
       java: {img:'/images/java-pixel-12.png', desc: 'Java programming language'},
       python: {img:'/images/python.png', desc: 'Python programming language'},
       php: {img:'/images/php.svg', desc: 'PHP programming language'},

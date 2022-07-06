@@ -1,38 +1,32 @@
-// create an array of objects with the id, trigger element (eg. button), and the content element
-const tabElements = [
-    {
-        id: 'profile',
-        triggerEl: document.querySelector('#profile-tab-example'),
-        targetEl: document.querySelector('#profile-example')
-    },
-    {
-        id: 'dashboard',
-        triggerEl: document.querySelector('#dashboard-tab-example'),
-        targetEl: document.querySelector('#dashboard-example')
-    },
-    {
-        id: 'settings',
-        triggerEl: document.querySelector('#settings-tab-example'),
-        targetEl: document.querySelector('#settings-example')
-    },
-    {
-        id: 'contacts',
-        triggerEl: document.querySelector('#contacts-tab-example'),
-        targetEl: document.querySelector('#contacts-example')
-    }
-];
 
-// options with default values
-const options = {
-    defaultTabId: 'settings',
-    activeClasses: 'text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-400 border-blue-600 dark:border-blue-500',
-    inactiveClasses: 'text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300',
-    onShow: () => {
-        console.log('tab is shown');
+const fullStack = {
+    languages: {
+      html: {img: '/images/html-pixel.png', desc: 'Hypertext Markup Language'},
+      css: {img:'/images/css3.svg', desc: 'Cascading Style Sheets'},
+      javascript: {img:'/images/pixelart/js-pixel.png', desc: 'JavaScript programming language'},
+      java: {img:'/images/java-pixel-12.png', desc: 'Java programming language'},
+      python: {img:'/images/python.png', desc: 'Python programming language'},
+      php: {img:'/images/php.svg', desc: 'PHP programming language'},
+    },
+    frameworks: {
+      vue: {img: '/images/vuejs.svg', desc: 'Vue.js framework'},
+      react: {img: '/images/react.svg', desc: 'React.js framework'},
+      angular: {img: '/images/angularjs.svg', desc: 'Angular.js framework'},
+    },
+    databases: {
+      mysql: {img: '/images/mysql.svg', desc: 'MySQL database'},
+      mongodb: {img: '/images/mongodb.svg', desc: 'MongoDB database'},
+      firebase: {img: '/images/firebase.svg', desc: 'Firebase database'},
+    },
+    design: {
+      photoshop: {img: '/images/photoshop.svg', desc: 'Photoshop design software'},
+      figma: {img: '/images/figma.svg', desc: 'Figma design software'},
+      xd: {img: '/images/xd.svg', desc: 'Adobe XD design software'},
+    },
+    os: {
+      windows: {img: '/images/windows.svg', desc: 'Windows operating system'},
+      linux: {img: '/images/linux.svg', desc: 'Linux operating system'},
     }
-};
+  }
 
-module.exports = {
-    tabElements,
-    options
-}
+  export default fullStack;
