@@ -28,6 +28,7 @@ function sortLanguagesByNewExp(languages){
             }
         }
     }
+    console.log(result)
     return result
 }
 
@@ -60,7 +61,7 @@ function getTodayExp(languages){
     for (let i = 0; i < languages.length; i++){
         languages[i].new_xps === 0 ? languages.splice(i, 1) : result[i] = languages[i];
     }
-    result = [] // -> discomment to test 'not today activity' status
+    // result = [] // -> discomment to test 'not today activity' status
     if(result.length == 0) this.onVacation();
     return result
 }

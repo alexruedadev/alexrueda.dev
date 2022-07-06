@@ -18,11 +18,11 @@
             </select>
         </div>
         <!-- tech menu desktop -->
-        <ul id="tech-menu" class="hidden text-sm font-medium text-center text-gray-500 rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
-            <li class="w-full">
-                <a id="languages" class="inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 rounded-l-lg active-tech" aria-current="page">Languages</a>
-            </li>
-            <li class="w-full">
+        <ul class="tech-menu hidden text-sm font-medium text-center text-gray-500 rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
+
+                <a v-for="(item, index, count) in $config.fullstack" :id="index" :class="count == 0 ? 'w-full inline-block p-4 bg-white hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white  dark:hover:bg-gray-700 rounded-l-lg active-tech' : 'w-full inline-block p-4 bg-white hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700'" aria-current="page">{{ index }}</a>
+
+<!--             <li class="w-full">
                 <a id="frameworks" class="inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Frameworks</a>
             </li>
             <li class="w-full">
@@ -33,7 +33,7 @@
             </li>
             <li class="w-full">
                 <a id="os" class="inline-block p-4 w-full bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">OS</a>
-            </li>
+            </li> -->
         </ul>
 
       </div>
@@ -43,10 +43,11 @@
       <div id="info" class="w-full">
         <!-- logos scroll -->
         <div class="mb-4 border-b border-gray-200 dark:border-gray-700 text-center w-full">
-            <ul data-aos="zoom-in" class="inline-flex -mb-px text-sm font-medium" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
-                <li v-for="item in $config.fullstack[tech]" class="mr-2" role="presentation">
-                    <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">
+            <ul data-aos="zoom-in" class="subtech-menu inline-flex -mb-px text-sm font-medium" data-tabs-toggle="#myTabContent" role="tablist">
+                <li v-for="(item, index, count) in $config.fullstack[tech]" :id="index" class="mr-2" role="presentation">
+                    <button :class="count == 0 ? 'active-subtech' : 'inline-block p-4 border-b-2 dark:hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700'">
                       <img :src="item.img" class="h-12 w-12 mx-5" alt="">
+                      <p>{{index}}</p>
                     </button>
                 </li>
             </ul>
@@ -54,114 +55,131 @@
         <!-- logos content -->
         <div id="myTabContent" class="mx-10 my-5">
             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Profile tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  {{ $config.fullstack[tech][subtech].desc }}
+                </p>
             </div>
-            <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-                <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-            </div>
-            <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-            </div>
-            <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
-                <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-            </div>
-        </div>
-
-        <div class="">
-          <div class="flex items-center m-3">
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
           </div>
         </div>
-
-        <!-- <div id="logos" class="p-10 text-center">
-          <div v-for="item in $config.fullstack.languages" class="inline-flex">
-            <img :src="item.img" class="h-14 w-14 mx-5" alt="">
-          </div>
-        </div> -->
-      </div>
-      
       </div>
     </div>
-  </div>
 
+  </div>
 </template>
 
 <script>
 
 export default {
-  data(){
-    return {
-      tech: 'languages',
-      active_tech: 'languages'
-    }
-  },
-  // mounted() se carga despues de renderizar el DOM
-  mounted(){
-    const tech_menu = document.getElementById('tech-menu');
+    data() {
+        return {
+            tech: "languages",
+            subtech: "html",
+        };
+    },
+    // mounted() se carga despues de renderizar el DOM
+    mounted() {
+        const tech_menu = document.getElementsByClassName("tech-menu");
+        const subtech_menu = document.getElementsByClassName("subtech-menu");
+        let i = 0;
+          tech_menu[0].childNodes.forEach(element => {
+            element.addEventListener("click", () => {
 
-    const languages = document.getElementById('languages');
-    const frameworks = document.getElementById('frameworks');
-    const databases = document.getElementById('databases');
-    const design = document.getElementById('design');
-    const os = document.getElementById('os');
+                element.classList.add('active-tech');
 
-    languages.addEventListener('click', ()=> {
-      languages.classList.add('active-tech');
-      frameworks.classList.remove('active-tech');
-      databases.classList.remove('active-tech');
-      design.classList.remove('active-tech');
-      os.classList.remove('active-tech');
-      this.tech = 'languages';
-    })
+                console.log(tech_menu[0].childNodes.length);
+                console.log(i)
 
-     frameworks.addEventListener('click', ()=> {
-      frameworks.classList.add('active-tech');
-      languages.classList.remove('active-tech');
-      databases.classList.remove('active-tech');
-      design.classList.remove('active-tech');
-      os.classList.remove('active-tech');
-      this.tech = 'frameworks';
-      console.log(tech)
-    })
+                if (tech_menu[0].childNodes.length) element.classList.add('rounded-r-lg')
 
-    databases.addEventListener('click', ()=> {
-      databases.classList.add('active-tech');
-      languages.classList.remove('active-tech');
-      frameworks.classList.remove('active-tech');
-      design.classList.remove('active-tech');
-      os.classList.remove('active-tech');
-      this.tech = 'databases';
-    })
-
-    design.addEventListener('click', ()=> {
-      design.classList.add('active-tech');
-      languages.classList.remove('active-tech');
-      databases.classList.remove('active-tech');
-      frameworks.classList.remove('active-tech');
-      os.classList.remove('active-tech');
-      this.tech = 'design';
-    })
-
-    os.addEventListener('click', ()=> {
-      os.classList.add('active-tech');
-      languages.classList.remove('active-tech');
-      databases.classList.remove('active-tech');
-      frameworks.classList.remove('active-tech');
-      design.classList.remove('active-tech');
-      this.tech = 'os';
-    })
-  },
+                switch(element.id){
+                    case "languages":
+                        this.tech = "languages";
+                        this.subtech = "html";
+                        break;
+                    case "frameworks":
+                        this.tech = "frameworks";
+                        this.subtech = "vue";
+                        break;
+                    case "databases":
+                        this.tech = "databases";
+                        this.subtech = "mysql";
+                        break;
+                    case "design":
+                        this.tech = "design";
+                        this.subtech = "photoshop";
+                        break;
+                    case "os":
+                        this.tech = "os";
+                        this.subtech = "windows";
+                        break;
+                }
+                i++;
+            });
+        });
+/* 
+        languages.addEventListener("click", () => {
+            languages.classList.add("active-tech");
+            frameworks.classList.remove("active-tech");
+            databases.classList.remove("active-tech");
+            design.classList.remove("active-tech");
+            os.classList.remove("active-tech");
+            this.tech = "languages";
+            this.subtech = "html";
+        });
+        frameworks.addEventListener("click", () => {
+            frameworks.classList.add("active-tech");
+            languages.classList.remove("active-tech");
+            databases.classList.remove("active-tech");
+            design.classList.remove("active-tech");
+            os.classList.remove("active-tech");
+            this.tech = "frameworks";
+            this.subtech = "vue";
+        });
+        databases.addEventListener("click", () => {
+            databases.classList.add("active-tech");
+            languages.classList.remove("active-tech");
+            frameworks.classList.remove("active-tech");
+            design.classList.remove("active-tech");
+            os.classList.remove("active-tech");
+            this.tech = "databases";
+            this.subtech = "mysql";
+        });
+        design.addEventListener("click", () => {
+            design.classList.add("active-tech");
+            languages.classList.remove("active-tech");
+            databases.classList.remove("active-tech");
+            frameworks.classList.remove("active-tech");
+            os.classList.remove("active-tech");
+            this.tech = "design";
+            this.subtech = "photoshop";
+        });
+        os.addEventListener("click", () => {
+            os.classList.add("active-tech");
+            languages.classList.remove("active-tech");
+            databases.classList.remove("active-tech");
+            frameworks.classList.remove("active-tech");
+            design.classList.remove("active-tech");
+            this.tech = "os";
+            this.subtech = "windows";
+        }); */
+        subtech_menu[0].childNodes.forEach(element => {
+            element.addEventListener("click", () => {
+                // element.classList.add('active-subtech');
+                this.subtech = element.id;
+                console.log(this.tech, this.subtech);
+            });
+        });
+    },
 }
 </script>
 
 <style>
 
 .active-tech {
-  @apply dark:bg-gray-700 dark:text-white transition ease-in-out duration-200;
+  @apply dark:bg-gray-700 dark:text-white;
+}
+.active-subtech {
+  @apply inline-block p-4 dark:border-b-2 dark:border-gray-300 dark:text-gray-300
 }
 
 </style>

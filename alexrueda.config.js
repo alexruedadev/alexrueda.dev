@@ -35,31 +35,31 @@ export default {
   },
   fullstack: {
     languages: {
-      HTML: {img: '/images/html-pixel.png'},
-      CSS: {img:'/images/css3.svg'},
-      JavaScript: {img:'/images/js-pixel-35.png'},
-      Java: {img:'/images/java-pixel-12.png'},
-      python: {img:'/images/python.png'},
-      php: {img:'/images/php.svg'},
+      html: {img: '/images/html-pixel.png', desc: 'Hypertext Markup Language'},
+      css: {img:'/images/css3.svg', desc: 'Cascading Style Sheets'},
+      javascript: {img:'/images/js-pixel-35.png', desc: 'JavaScript programming language'},
+      java: {img:'/images/java-pixel-12.png', desc: 'Java programming language'},
+      python: {img:'/images/python.png', desc: 'Python programming language'},
+      php: {img:'/images/php.svg', desc: 'PHP programming language'},
     },
     frameworks: {
-      Vue: {img: '/images/vuejs.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
-      React: {img: '/images/react.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
-      Angular: {img: '/images/angularjs.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+      vue: {img: '/images/vuejs.svg', desc: 'Vue.js framework'},
+      react: {img: '/images/react.svg', desc: 'React.js framework'},
+      angular: {img: '/images/angularjs.svg', desc: 'Angular.js framework'},
     },
     databases: {
-      MySQL: {img: '/images/mysql.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
-      MongoDB: {img: '/images/mongodb.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
-      Firebase: {img: '/images/firebase.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+      mysql: {img: '/images/mysql.svg', desc: 'MySQL database'},
+      mongodb: {img: '/images/mongodb.svg', desc: 'MongoDB database'},
+      firebase: {img: '/images/firebase.svg', desc: 'Firebase database'},
     },
     design: {
-      photoshop: {img: '/images/photoshop.svg'},
-      figma: {img: '/images/figma.svg'},
-      xd: {img: '/images/xd.svg'},
+      photoshop: {img: '/images/photoshop.svg', desc: 'Photoshop design software'},
+      figma: {img: '/images/figma.svg', desc: 'Figma design software'},
+      xd: {img: '/images/xd.svg', desc: 'Adobe XD design software'},
     },
     os: {
-      windows: {img: '/images/windows.svg'},
-      linux: {img: '/images/linux.svg'},
+      windows: {img: '/images/windows.svg', desc: 'Windows operating system'},
+      linux: {img: '/images/linux.svg', desc: 'Linux operating system'},
     }
   },
   studing: {
