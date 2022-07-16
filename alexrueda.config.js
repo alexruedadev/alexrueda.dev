@@ -3,7 +3,7 @@
 export default {
   name: 'Álex Rueda',
   domain: 'alexrueda.dev', // add without https:// , used in meta tags and share urls
-  image: '/images/avatar.png',
+  image: '/images/av2.png',
   email: 'me@alexrueda.dev',
   googleAnalyticsV4: {
     enabled: false,
@@ -35,22 +35,22 @@ export default {
   },
   fullstack: {
     languages: {
-      HTML: {img: '/images/html-pixel.png'},
-      CSS: {img:'/images/css3.svg'},
-      JavaScript: {img:'/images/js-pixel-35.png'},
-      Java: {img:'/images/java-pixel-12.png'},
-      python: {img:'/images/python.png'},
-      php: {img:'/images/php.svg'},
+      html: {img: '/images/html-pixel5.png', desc: 'HTML5 Description'},
+      css: {img:'/images/css-pixel.png', desc: 'CSS3 Description'},
+      javascript: {img:'/images/javascript-pixel.png', desc: 'Javascript Description'},
+      Java: {img:'/images/java-pixel2.png', desc: 'Java Description'},
+      python: {img:'/images/python-pixel.png', desc: 'Python Description'},
+      php: {img:'/images/php-pixel2.png', desc: 'PHP Description'},
     },
     frameworks: {
-      Vue: {img: '/images/vuejs.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
-      React: {img: '/images/react.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
-      Angular: {img: '/images/angularjs.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+      vue: {img: '/images/vuejs.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+      react: {img: '/images/react.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+      angular: {img: '/images/angularjs.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
     },
     databases: {
-      MySQL: {img: '/images/mysql.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
-      MongoDB: {img: '/images/mongodb.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
-      Firebase: {img: '/images/firebase.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+      mysql: {img: '/images/mysql.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+      mongodb: {img: '/images/mongodb.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+      firebase: {img: '/images/firebase.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
     },
     design: {
       photoshop: {img: '/images/photoshop.svg'},
@@ -158,8 +158,8 @@ export default {
         iBlogTech: 'I blog things',
         haveALook: 'have a look',
         friendlyNeighborhood: 'Your friendly neighborhood',
-        description: `Hey there 👋 welcome to my website. My name is <b>Álex Rueda</b> and i'm <b>web developer student and freelance</b>. If you are interested in working with me, <b>have a look to my website to learn about me</b> and get in touch whenever you want.`,
-        words: ['Developer{}', 'Programmer{}'],
+        description: `Hey there 👋 welcome to my website. </br>My name is <b>Álex Rueda</b> and i'm <b>web developer student and freelance</b>. If you are interested in working together, have a look to my website to learn about me.`,
+        words: ['Developer', 'Programmer'],
         working: {
           title: 'Working as',
           job: 'Freelancer',
@@ -294,7 +294,7 @@ export default {
         haveALook: 'have a look',
         friendlyNeighborhood: 'Tu amigo y vecino',
         description: `Hola! 👋 mi nombre es <b>Álex Rueda</b> y soy <b>estudiante de desarrollo web</b>. Mi pasión por internet y el desarrollo de software me convierten en un constante devorador de código. Si te interesa que trabajemos juntos, <b>cotillea mi página</b> para saber más sobre mí y contacta conmigo cuando quieras.`,
-        words: ['Desarrollador{}', 'Programador{}'],
+        words: ['Desarrollador', 'Programador'],
         working: {
           title: 'Trabajo actual',
           job: 'Autónomo',

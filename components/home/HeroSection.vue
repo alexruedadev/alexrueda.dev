@@ -1,5 +1,6 @@
 <template>
-  <div class="relative overflow-hidden">
+  <div class="relative overflow-hidden font-vt">
+    
     <div class="relative">
       <main class="">
         <div id="liner" class="mx-auto py-8 max-w-7xl border-l border-r border-dashed">
@@ -7,16 +8,17 @@
             <!-- IMG Container -->
             <div id="liner" class="sm:mt-16 px-5 lg:mt-0 lg:col-span-6 lg:border-r lg:border-dashed">
               <div class="flex-shrink-0 w-full sm:mx-auto flex flex-1 items-center justify-center rounded-lg sm:overflow-hidden">
-                <img id="hero-img" class="rounded-lg sm:h-60 h-60 mt-10" :src="$config.image" :alt="$config.name"> <!-- bg-gradient-to-r from-indigo-500 to-blue-500 -->
-                <img id="hero-bg" class="sm:h-60 h-60 mt-10" src="/images/shape2-bg.png" alt="">
+                <img id="hero-img" class="rounded-lg sm:h-60 h-60 mt-24" :src="$config.image" :alt="$config.name"> <!-- bg-gradient-to-r from-indigo-500 to-blue-500 -->
+                <img id="hero-bg" class="sm:w-60 rounded-lg mt-10 w-4/6" src="/images/pixel-galaxy.gif" alt="">
               </div>
+              
             </div>
             <!-- INFO Container -->
             <div class="pt-8 px-4 sm:px-6 md:max-w-2xl md:mx-auto lg:col-span-6 lg:flex">
               <div class="text-center sm:text-left">
                 <!-- to blog Button -->
                 <nuxt-link v-if="$config.blog.enabled" :to="localePath('/blog')" class="my-5 lg:m-0 group inline-flex hover:bg-black items-center bg-gray-700 text-white dark:bg-gray-900 rounded-full p-0.5 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
-                  <span id="button-slim" class="px-3 py-1 sm:py-0.5 leading-5 rounded-full">{{ $t('button.blog') }}</span>
+                  <span id="button-slim" class="px-3 py-1 sm:py-0.5 leading-5 rounded-md">{{ $t('button.blog') }}</span>
                   <span class="ml-4 text-xs">{{$t('button.action')}}</span>
                   <svg class="transition duration-500 transform block group-hover:rotate-180 hover-arrow ml-2 w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
@@ -53,11 +55,14 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
 
     }
+  },
+  mounted() {
   },
   methods: {
   }
@@ -65,6 +70,7 @@ export default {
 </script>
 
 <style scoped>
+
 >>> .vue-typer .custom.char {
   @apply text-blue-light;
 }

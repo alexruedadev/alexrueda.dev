@@ -11,6 +11,7 @@
 
 <script>
 import FullStack from '~/components/home/FullStack.vue'
+import Tab from '~/components/home/Tab.vue';
 
 export default {
     head() {
@@ -42,7 +43,7 @@ export default {
             console.timeEnd(fetchDocsLabel);
         }
     },
-    components: { FullStack }
+    components: { FullStack, Tab }
 }
 </script>
 

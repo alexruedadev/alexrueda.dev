@@ -83,6 +83,7 @@ module.exports = {
       }),
       fontFamily: {
         sans: ['Inter var',...defaultTheme.fontFamily.sans],
+        vt: "'VT323', monospace",
       },
     },
   },
