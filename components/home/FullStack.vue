@@ -2,7 +2,7 @@
   <div id="liner" class="max-w-7xl mx-auto border-l border-dashed border-r p-8 font-pixelated_bold">
     <div id="div-2" class="max-w-7xl mx-auto">
       <div id="div-2.1" class="text-center">
-        <h2 id="section-title" class="font-pixelated text-3x1" >My Stack</h2>
+        <h2 id="section-title" class="font-pixelated_bold text-3x1 text-gray-200" >My Stack</h2>
       </div>
       <div id="div-2.2" class="mt-10">
         <!-- Subtitle ?? -->

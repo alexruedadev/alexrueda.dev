@@ -1,15 +1,15 @@
 <template>
-  <div class="relative overflow-hidden font-pixelated">
+  <div class="relative overflow-hidden">
     
     <div class="relative">
       <main class="">
         <div id="liner" class="mx-auto py-8 max-w-7xl border-l border-r border-dashed">
           <div data-aos="zoom-in" class="lg:grid lg:grid-cols-12">
             <!-- IMG Container -->
-            <div id="liner" class="sm:mt-16 px-5 lg:mt-0 lg:col-span-6 lg:border-r lg:border-dashed">
+            <div id="liner" class="sm:mt-16 px-5 lg:mt-0 lg:col-span-6 lg:border-r lg:border-dashed pb-10">
               <div class="flex-shrink-0 w-full sm:mx-auto flex flex-1 items-center justify-center rounded-lg sm:overflow-hidden">
                 <img id="hero-img" class="rounded-lg sm:h-60 h-60 mt-24" :src="$config.image" :alt="$config.name"> <!-- bg-gradient-to-r from-indigo-500 to-blue-500 -->
-                <img id="hero-bg" class="sm:w-60 rounded-lg mt-10 w-4/6" src="/images/pixel-galaxy.gif" alt="">
+                <img id="hero-bg" class="sm:w-60 rounded-lg mt-10 w-4/6" src="/images/pixel-bg-night.gif" alt="">
               </div>
               
             </div>
@@ -27,9 +27,9 @@
                 </nuxt-link> -->
 
                 <!-- hero title -->
-                <h1 id= "hero-title" class="mt-4 text-3xl md:text-2x1 tracking-tight font-extrabold sm:mt-5 sm:leading-none lg:mt-6 lg:text-3x1 xl:text-2x1">
-                  <span class="leading-relaxed md:block">{{ $t('hero.friendlyNeighborhood') }}</span>
-                  <div>
+                <h1 id= "hero-title" class="mt-4 text-3xl md:text-2x1 tracking-tight font-extrabold sm:mt-5 sm:leading-none lg:mt-6 lg:text-3x1 xl:text-2x1 font-pixelated_bold">
+                  <span class="leading-tight md:block">{{ $t('hero.friendlyNeighborhood') }}</span>
+                  <div class="pt-2">
                     <vue-typer :text="$t('hero.words')"></vue-typer>
                   </div>
                 </h1>
