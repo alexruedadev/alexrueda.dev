@@ -84,6 +84,13 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var',...defaultTheme.fontFamily.sans],
         vt: "'VT323', monospace",
+        droid: "Droid",
+        pixelated: "Pixelated",
+        pixelated_bold: "Pixelated-bold",
+        pixel_boy: "Pixel-boy",
+        extrude: "Extrude",
+        presstart: "PressStart",
+        coderscrux: "CodersCrux"
       },
     },
   },

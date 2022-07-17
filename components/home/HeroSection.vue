@@ -1,5 +1,5 @@
 <template>
-  <div class="relative overflow-hidden font-vt">
+  <div class="relative overflow-hidden font-pixelated">
     
     <div class="relative">
       <main class="">
@@ -16,25 +16,28 @@
             <!-- INFO Container -->
             <div class="pt-8 px-4 sm:px-6 md:max-w-2xl md:mx-auto lg:col-span-6 lg:flex">
               <div class="text-center sm:text-left">
+
                 <!-- to blog Button -->
-                <nuxt-link v-if="$config.blog.enabled" :to="localePath('/blog')" class="my-5 lg:m-0 group inline-flex hover:bg-black items-center bg-gray-700 text-white dark:bg-gray-900 rounded-full p-0.5 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
+                <!-- <nuxt-link v-if="$config.blog.enabled" :to="localePath('/blog')" class="my-5 lg:m-0 group inline-flex hover:bg-black items-center bg-gray-700 text-white dark:bg-gray-900 rounded-full p-0.5 pr-2 sm:text-base lg:text-xs xl:text-base hover:text-gray-200">
                   <span id="button-slim" class="px-3 py-1 sm:py-0.5 leading-5 rounded-md">{{ $t('button.blog') }}</span>
                   <span class="ml-4 text-xs">{{$t('button.action')}}</span>
                   <svg class="transition duration-500 transform block group-hover:rotate-180 hover-arrow ml-2 w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                   </svg>
-                </nuxt-link>
+                </nuxt-link> -->
+
                 <!-- hero title -->
-                <h1 id= "hero-title" class="mt-4 text-2xl md:text-3x1 tracking-tight font-extrabold sm:mt-5 sm:leading-none lg:mt-6 lg:text-3xl xl:text-3xl">
+                <h1 id= "hero-title" class="mt-4 text-3xl md:text-2x1 tracking-tight font-extrabold sm:mt-5 sm:leading-none lg:mt-6 lg:text-3x1 xl:text-2x1">
                   <span class="leading-relaxed md:block">{{ $t('hero.friendlyNeighborhood') }}</span>
                   <div>
                     <vue-typer :text="$t('hero.words')"></vue-typer>
                   </div>
                 </h1>
-                <p v-html="$t('hero.description')" id="section-desc" class="my-5 text-base sm:mt-5 text-left">
+                <p v-html="$t('hero.description')" id="section-desc" class="my-5 text-lg sm:text-base mt-20 mx-5 sm:mx-1 text-left">
                   
                 </p>
-                <p id="hero-title" class=" px-1  text-sm tracking-wide font-semibold text-left py-3">
+                <!-- working as -->
+                <!-- <p id="hero-title" class=" px-1 text-sm tracking-wide font-semibold text-left py-3">
                   {{ $t('hero.working.title') }}
                 </p>
 
@@ -44,7 +47,7 @@
                       {{ $t('hero.working.job') }}
                       </p>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

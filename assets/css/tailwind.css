@@ -2,6 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
+
+    @font-face {
+        font-family: "Droid";
+        src: url("../fonts/DisposableDroidBB.ttf") format('truetype');
+    }
+
+    @font-face {
+        font-family: "Pixelated";
+        src: url("../fonts/SFPixelate.ttf") format('truetype');
+    }
+
+    @font-face {
+        font-family: "Pixelated-bold";
+        src: url("../fonts/SFPixelate-Bold.ttf") format('truetype');
+    }
+
+    @font-face {
+        font-family: "CodersCrux";
+        src: url("../fonts/CodersCruxRegular-Xzvd.ttf") format('truetype');
+    }
+
+    @font-face {
+        font-family: "PressStart";
+        src: url("../fonts/press-start-2p.regular.ttf") format('truetype');
+    }
+    /**
+     * Others
+     */
+    @font-face {
+        font-family: "Pixel-boy";
+        src: url("../fonts/Pixeboy-z8XGD.ttf") format('truetype');
+    }
+    @font-face {
+        font-family: "Extrude";
+        src: url("../fonts/Extrude-90aK.ttf") format('truetype');
+    }
+
 /* header title */
 
 body #hero-title {
