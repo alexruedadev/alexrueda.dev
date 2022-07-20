@@ -3,7 +3,7 @@
 export default {
   name: 'Álex Rueda',
   domain: 'alexrueda.dev', // add without https:// , used in meta tags and share urls
-  image: '/images/v2.gif',
+  image: '/images/v3.gif',
   email: 'me@alexrueda.dev',
   googleAnalyticsV4: {
     enabled: false,
@@ -124,7 +124,7 @@ export default {
     ]
   },
   loadingIndicator: {
-    name: 'chasing-dots'
+    name: 'cube-grid'
     // https://tobiasahlin.com/spinkit/
     // circle
     // cube-grid

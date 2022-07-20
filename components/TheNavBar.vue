@@ -6,7 +6,7 @@
         <nuxt-link :to="localePath('/')" class="flex-shrink-0">
           <TheLogo class="text-3xl w-auto" />
         </nuxt-link>
-        <div class="hidden md:visible lg:block lg:ml-6 font-pixelated text-sm">
+        <div class="hidden md:visible lg:block lg:ml-6 text-sm">
           <div class="flex space-x-4">
             <nuxt-link id="nav-link" v-show="$config.projects.enabled" :to="localePath('/projects')" class="active px-3 py-2 font-bold">{{ $t('nav.projects')}}</nuxt-link>
             <nuxt-link id="nav-link" v-show="$config.uses.enabled" :to="localePath('/stats')" class="active px-3 py-2 font-bold">{{ $t('nav.uses')}}</nuxt-link>

@@ -1,14 +1,14 @@
 <template>
   <div id="liner" class="max-w-7xl mx-auto border-l border-dashed border-r p-8 font-pixelated_bold">
-    <div id="div-2" class="max-w-7xl mx-auto">
-      <div id="div-2.1" class="text-center">
+    <div id="div-2" class="">
+      <!-- <div id="div-2.1" class="text-center">
         <h2 id="section-title" class="font-pixelated_bold text-3x1 text-gray-200" >My Stack</h2>
-      </div>
+      </div> -->
       <div id="div-2.2" class="mt-10">
         <!-- Subtitle ?? -->
         
         <!-- tech menu desktop -->
-        <ul id="tech-menu" class="cursor-pointer hidden text-sm font-medium text-center text-gray-500 rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
+<!--         <ul id="tech-menu" class="cursor-pointer hidden text-sm font-medium text-center text-gray-500 rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
             <li class="w-full">
                 <a id="languages" class="inline-block p-4 w-full bg-gray-100 hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 rounded-l-lg active-tech" aria-current="page">Languages</a>
             </li>
@@ -24,7 +24,7 @@
             <li class="w-full">
                 <a id="os" class="inline-block p-4 w-full bg-gray-100 rounded-r-lg hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">OS</a>
             </li>
-        </ul>
+        </ul> -->
 
       </div>
       <!-- tools navigation -->
@@ -73,7 +73,7 @@ export default {
     const design = document.getElementById('design');
     const os = document.getElementById('os');
 
-    languages.addEventListener('click', ()=> {
+    /* languages.addEventListener('click', ()=> {
       languages.classList.add('active-tech');
       frameworks.classList.remove('active-tech');
       databases.classList.remove('active-tech');
@@ -121,7 +121,7 @@ export default {
       design.classList.remove('active-tech');
       this.tech = 'os';
       this.tool = 'windows';
-    })
+    }) */
   },
 }
 </script>

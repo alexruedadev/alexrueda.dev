@@ -1,21 +1,17 @@
 <template>
-  <div class="relative overflow-hidden">
-    
-    <div class="relative">
-      <main class="">
         <div id="liner" class="mx-auto py-8 max-w-7xl border-l border-r border-dashed">
           <div data-aos="zoom-in" class="lg:grid lg:grid-cols-12">
             <!-- IMG Container -->
-            <div id="liner" class="sm:mt-16 px-5 lg:mt-0 lg:col-span-6 lg:border-r lg:border-dashed pb-10">
-              <div class="flex-shrink-0 w-full sm:mx-auto flex flex-1 items-center justify-center rounded-lg sm:overflow-hidden">
-                <img id="hero-img" class="rounded-lg sm:h-60 h-60 mt-24" :src="$config.image" :alt="$config.name"> <!-- bg-gradient-to-r from-indigo-500 to-blue-500 -->
-                <img id="hero-bg" class="sm:w-60 rounded-lg mt-10 w-4/6" src="/images/pixel-bg-night.gif" alt="">
-              </div>
-              
+            <div id="liner" class="flex justify-center lg:col-span-6 lg:border-r lg:border-dashed p-10">
+              <!-- <div class="flex-shrink-0 flex flex-1 items-center justify-center">
+                
+                <img id="hero-bg" class="sm:w-60 rounded-lg mt-10 w-64" src="/images/pixel-bg-night.gif" alt=""> 
+              </div>-->
+              <img id="hero-img" class="sm:h-60 h-60" :src="$config.image" :alt="$config.name"></img>
             </div>
             <!-- INFO Container -->
             <div class="pt-8 px-4 sm:px-6 md:max-w-2xl md:mx-auto lg:col-span-6 lg:flex">
-              <div class="text-center sm:text-left">
+              <div class="text-center lg:text-left">
 
                 <!-- to blog Button -->
                 <!-- <nuxt-link v-if="$config.blog.enabled" :to="localePath('/blog')" class="my-5 lg:m-0 group inline-flex hover:bg-black items-center bg-gray-700 text-white dark:bg-gray-900 rounded-full p-0.5 pr-2 sm:text-base lg:text-xs xl:text-base hover:text-gray-200">
@@ -33,7 +29,7 @@
                     <vue-typer :text="$t('hero.words')"></vue-typer>
                   </div>
                 </h1>
-                <p v-html="$t('hero.description')" id="section-desc" class="my-5 text-lg sm:text-base mt-20 mx-5 sm:mx-1 text-left">
+                <p v-html="$t('hero.description')" id="section-desc" class="my-5 text-lg sm:text-base mt-20 mx-5 sm:mx-10 lg:mx-0 text-left">
                   
                 </p>
                 <!-- working as -->
@@ -52,9 +48,6 @@
             </div>
           </div>
         </div>
-      </main>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -98,7 +91,7 @@ export default {
 }
 
 #hero-img {
-  position: absolute;
+  /* position: absolute; */
   z-index: 2;
 
 }
