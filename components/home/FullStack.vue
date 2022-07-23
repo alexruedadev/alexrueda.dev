@@ -8,23 +8,27 @@
         <!-- Subtitle ?? -->
         
         <!-- tech menu desktop -->
-<!--         <ul id="tech-menu" class="cursor-pointer hidden text-sm font-medium text-center text-gray-500 rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
+         <ul id="tech-menu" class="cursor-pointer hidden text-sm font-medium text-center text-gray-500 rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
             <li class="w-full">
-                <a id="languages" class="inline-block p-4 w-full bg-gray-100 hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 rounded-l-lg active-tech" aria-current="page">Languages</a>
+                
+                <a id="languages" class="inline-block p-2 pt-3 w-3/4 bg-gray-100 hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 border-4 shadow-lg border-gray-400 active-tech" aria-current="page">
+                  <img src="images/htmltag-pixel.png" class="w-8 inline-block -mt-1" alt=""/>
+                  Languages
+                  </a>
             </li>
             <li class="w-full">
-                <a id="frameworks" class="inline-block p-4 w-full bg-gray-100 hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Frameworks</a>
+                <a id="frameworks" class="inline-block p-2 w-3/4 bg-gray-100 hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 border-2 shadow-lg border-gray-400 active-tech">Frameworks</a>
             </li>
             <li class="w-full">
-                <a id="databases" class="inline-block p-4 w-full bg-gray-100 hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Databases</a>
+                <a id="databases" class="inline-block p-2 w-3/4 bg-gray-100 hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 border-2 shadow-lg border-gray-400 active-tech">Databases</a>
             </li>
             <li class="w-full">
-                <a id="design" class="inline-block p-4 w-full bg-gray-100 hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Design</a>
+                <a id="design" class="inline-block p-2 w-3/4 bg-gray-100 hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 border-2 shadow-lg border-gray-400 active-tech">Design</a>
             </li>
             <li class="w-full">
                 <a id="os" class="inline-block p-4 w-full bg-gray-100 rounded-r-lg hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">OS</a>
             </li>
-        </ul> -->
+        </ul>
 
       </div>
       <!-- tools navigation -->
@@ -34,7 +38,7 @@
             <ul id="tool-logos">
                 <li v-for="(item, index, n) in $config.fullstack[tech]" class="mr-2">
                     <button id="tool-btn" :class="n == 0 ? 'active-tool' : 'inactive'" type="button">
-                      <img :src="item.img" class="h-10 w-10 mx-5" alt="">
+                      <img :src="item.img" class="h-10 w-10 mx-5 hover:scale-125" alt="">
                       <!-- <p class="font-vt text-gray-300 pt-3">{{index}}</p> -->
                     </button>
                 </li>
@@ -48,7 +52,7 @@
         </div>
       </div>
       <!-- tool navigation end -->
-
+      
     </div>
   </div>
 
@@ -132,20 +136,20 @@ export default {
   @apply w-full bg-gray-900 rounded-lg my-10 p-3
 }
 
-#tools {
+/* #tools {
   @apply mb-4 border-b border-gray-200 dark:border-gray-700 text-center w-full overflow-scroll sm:overflow-hidden;
-}
+} */
 
 #tool-logos {
   @apply inline-flex -mb-px text-sm font-medium;
 }
 
 #tool-btn {
-  @apply inline-block p-4 dark:border-b-2 border-transparent dark:hover:border-gray-300 border-gray-100 dark:border-gray-700
+  @apply inline-block p-4 dark:border-b-2 border-transparent dark:hover:border-gray-300 border-gray-100 dark:border-gray-700;
 }
 
 .active-tech {
-  @apply dark:bg-gray-700 dark:text-white transition ease-in-out duration-200;
+  @apply dark:bg-gray-900 dark:text-white transition ease-in-out duration-200;
 }
 
 .active-tool {

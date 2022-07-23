@@ -3,10 +3,10 @@
   <div data-aos="fade-up" class="relative max-w-7xl py-6 mx-auto">
     <div class="text-center">
       
-      <h2 id="section-title" class="text-2xl tracking-tight font-extrabold">
+      <h2 id="section-title" class="text-2xl tracking-tight font-pixelated">
         {{ $t('uses.header') }}
       </h2>
-      <p v-html="$t('uses.subtext')" class="mt-2 px-2 max-w-2xl mx-auto text-sm leading-7 text-gray-400"></p>
+      <!-- <p v-html="$t('uses.subtext')" class="mt-2 px-2 max-w-2xl mx-auto text-sm leading-7 text-gray-400"></p> -->
     </div>
   </div>
   <div data-aos="zoom-in" class="max-w-4xl mx-4 sm:mx-auto bg-gray-100 dark:bg-gray-900 shadow-md rounded-md overflow-hidden sm:rounded-lg">

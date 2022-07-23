@@ -57,6 +57,10 @@ body #section-title {
 } */
 /* Subheader title */
 
+/**********/
+/* colors */
+/**********/
+
 body #section-subtitle {
     @apply dark:text-gray-200;
 }

@@ -1,7 +1,8 @@
 <template>
   <div>
     <HeroSection/>
-    <FullStack/>
+    <Divider/>
+    <NewStack/>
     <!-- <Hardskills/>
     <Currently/>
     <LazyRecentBlog v-if="$config.blog.enabled && posts" :posts="posts"/> 
@@ -12,6 +13,7 @@
 <script>
 import FullStack from '~/components/home/FullStack.vue'
 import Tab from '~/components/home/Tab.vue';
+import Divider from '~/components/home/Divider.vue';
 
 export default {
     head() {
@@ -43,7 +45,7 @@ export default {
             console.timeEnd(fetchDocsLabel);
         }
     },
-    components: { FullStack, Tab }
+    components: { FullStack, Tab, Divider }
 }
 </script>
 

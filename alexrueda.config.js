@@ -43,14 +43,14 @@ export default {
       php: {img:'/images/php-pixel2.png', desc: 'PHP Description'},
     },
     frameworks: {
-      vue: {img: '/images/vuejs.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
-      react: {img: '/images/react.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
-      angular: {img: '/images/angularjs.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+      vue: {img: '/images/vuejs.svg', desc: 'HTML5 Description'},
+      react: {img: '/images/react.svg', desc: 'HTML5 Description'},
+      angular: {img: '/images/angularjs.svg', desc: 'HTML5 Description'},
     },
     databases: {
-      mysql: {img: '/images/mysql.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
-      mongodb: {img: '/images/mongodb.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
-      firebase: {img: '/images/firebase.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
+      mysql: {img: '/images/mysql.svg', desc: 'HTML5 Description'},
+      mongodb: {img: '/images/mongodb.svg', desc: 'HTML5 Description'},
+      firebase: {img: '/images/firebase.svg', desc: 'HTML5 Description'},
     },
     design: {
       photoshop: {img: '/images/photoshop.svg'},

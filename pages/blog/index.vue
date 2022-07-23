@@ -1,7 +1,7 @@
 <template>
   <div id="liner" class="relative max-w-7xl border-r border-l border-dashed py-6 mx-auto">
     <div data-aos="fade-up" class="text-center">
-      <h2 id="section-title" class="text-2xl tracking-tight font-extrabold">
+      <h2 id="section-title" class="text-2xl tracking-tight font-pixelated">
         {{ $t('blog.header') }}
       </h2>
       <p id="section-desc" class="mt-2 px-2 max-w-2xl mx-auto text-sm leading-7">

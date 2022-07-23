@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col rounded-xl shadow-lg overflow-hidden" >
+  <div class="flex flex-col border-4 border-gray-700 shadow-lg overflow-hidden" >
       <div class="flex-1 bg-gray-900 p-5 flex flex-row justify-between">
         <div class="flex-1 flex flex-col justify-between">
           <div>
@@ -9,7 +9,7 @@
               </p>
             </div>
             <nuxt-link class="group" :to="localePath(`/projects/${project.slug}`)">
-              <h3 class="mt-0.5 group-hover:text-blue-light text-md leading-7 font-semibold text-gray-200">
+              <h3 class="mt-0.5 group-hover:text-blue-light text-md leading-7 font-pixelated_bold text-gray-200">
                 {{ project.title }}
               </h3>
               <p class="text-xs text-gray-400">
