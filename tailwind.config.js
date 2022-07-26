@@ -26,7 +26,17 @@ module.exports = {
         'sun': '#FFFF00',
         'blue-first' : '#0380c8',
         'blue-light' : '#0fcbe9',
-        'blue-medium': '#0eabe1'
+        'blue-medium': '#0eabe1',
+        
+        /* new palette */
+
+        'palette-blue-100': '#63f4ff',
+        'palette-blue-200': '#45abc2',
+        'palette-blue-300': '#307087',
+        'palette-blue-400': '#1f4154',
+        'palette-blue-500': '#0f1f2c'
+        
+
       },
       typography: (theme) => ({
         dark: {
