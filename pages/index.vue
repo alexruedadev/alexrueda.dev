@@ -2,7 +2,9 @@
   <div>
     <HeroSection/>
     <Divider/>
-    <NewStack/>
+    <Languages/>
+    <Divider2/>
+    <Frameworks/>
     <!-- <Hardskills/>
     <Currently/>
     <LazyRecentBlog v-if="$config.blog.enabled && posts" :posts="posts"/> 
@@ -12,8 +14,9 @@
 
 <script>
 import FullStack from '~/components/home/FullStack.vue'
-import Tab from '~/components/home/Tab.vue';
 import Divider from '~/components/home/Divider.vue';
+import Divider2 from '../components/home/Divider2.vue';
+import Frameworks from '../components/home/Frameworks.vue';
 
 export default {
     head() {
@@ -45,7 +48,7 @@ export default {
             console.timeEnd(fetchDocsLabel);
         }
     },
-    components: { FullStack, Tab, Divider }
+    components: { FullStack, Divider, Divider2, Frameworks }
 }
 </script>
 

@@ -1,8 +1,12 @@
 <template>
-    <div id="liner" class="max-w-7xl mx-auto border-l border-r border-dashed mt-10">
-        <div>
-        <!-- avatar -->
-        <div class="sm:flex grid justify-center">
+    
+    <div id="liner" class="max-w-7xl mx-auto border-l border-r border-dashed">
+
+          <div class="mx-auto text-center font-pixelated_bold text-xl">
+            <h2 id="title">Frameworks</h2>
+          </div>
+        <div class="sm:flex grid justify-center mt-10">
+          
         <!-- tools -->
         <div data-aos="zoom-in" v-for="(item, index, n) in $config.fullstack[tech]" id="tools" class="sm:flex-col flex-row m-2 text-center">
             <ul id="tool-logos">
@@ -22,7 +26,7 @@
         <!-- tools description -->
         
       </div>
-        </div>
+
     </div>
 </template>
 
@@ -30,14 +34,18 @@
 export default {
     data(){
     return {
-      tech: 'languages',
-      tool: 'html'
+      tech: 'frameworks',
+      tool: 'vue'
     }
   }
 }
 </script>
 
 <style>
+
+#title {
+  text-transform: capitalize;
+}
 
 #tools-nav {
   @apply w-full bg-gray-900 rounded-lg my-10 p-3

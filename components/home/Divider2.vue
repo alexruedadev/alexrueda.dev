@@ -13,7 +13,7 @@
     <!-- icon -->
     <div class="flex justify-center">
 <!--         <img src="images/bbdd4.png" class="w-12 h-12 p-2 m-1 hover:bg-gray-700 rounded-sm" alt=""></img> -->
-        <img src="images/htmltag2-pixel.png" class="w-14 h-14 p-2 m-1 hover:bg-gray-700 rounded-sm" alt="">
+        <img src="images/bbdd3.png" class="w-14 h-14 p-2 m-1 hover:bg-gray-700 rounded-sm" alt="">
 <!--         <img src="images/frameworks-pixel.png" class="w-12 h-12 p-2 m-1 hover:bg-gray-700 rounded-sm" alt="">
         <img src="images/pincel-pixel.png" class="w-12 h-12 p-2 m-1 hover:bg-gray-700 rounded-sm" alt=""> -->
         

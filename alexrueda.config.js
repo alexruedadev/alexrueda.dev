@@ -113,7 +113,7 @@ export default {
       {title: 'Keyboard', value: 'Logitech G915 TKL Gaming - Wireless Lightspeed'},
       {title: 'Mouse', value: 'Logitech G703 - Wireless Lightspeed'},
       {title: 'Monitor', value: 'Lenovo QHD (2560 x 1440) 24 Inch IPS Display'},
-      {title: 'Laptop • Processor • Graphics', value: 'MacBook Pro (16-inch, 2019) • 2.6 GHz 6-Core Intel Core i7 • AMD Radeon Pro 5300M 4 GB + Intel UHD Graphics 630 1536 MB'}
+      {title: 'Laptop', value: 'Notebook HP Envy - Intel i7 - Nvidia...'}
     ]
   },
   recommendations: {

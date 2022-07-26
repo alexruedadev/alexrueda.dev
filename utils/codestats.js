@@ -1,3 +1,27 @@
+
+// Codestats level factor value.
+const level_factor = 0.025;
+
+// Get the level based on given XP.
+const get_level = (total_xp) => Math.floor(level_factor * Math.sqrt(total_xp));
+
+// Get the amount of XP required to reach the next level from the given level.
+const get_next_level_xp = (level) => Math.pow(Math.ceil( (level + 1) / level_factor), 2);
+
+// Get the progress to the next level in percentage.
+const get_level_progress = (total_xp) => {
+
+    let level = get_level(total_xp);
+    let current_level_xp = get_next_level_xp(level - 1);
+    let next_level_xp = get_next_level_xp(level)
+    let have_xp = total_xp - current_level_xp
+    let needed_xp = next_level_xp - current_level_xp
+
+    return Math.round( have_xp / needed_xp * 100 )
+}
+
+/********************************************************************************************************/
+
 /**
  * Replace spaces in string for any character.
  * 
@@ -11,9 +35,10 @@
 const replaceKeySpaces = (key, item) => key.replace(/\s/g, item);
 
 /**
- * Sort languages from higher to lower experience `new_xps`
- * @param {*} languages fetched from https://codestats.net
- * @returns array of objects with sorted languages.
+ * Sort all languages from higher to lower experience `new_xps`.
+ * IMPORTANT: Create a new array with new propiety 'name' with the key name of each language (to access better later).
+ * @param {*} languages fetched from https://codestats.net/api/users/ + username.
+ * @returns a new array of objects with sorted languages.
  */
 function sortLanguagesByNewExp(languages){
     let result = []
@@ -58,10 +83,10 @@ function sortLanguagesByTotalExp(languages){
 function getTodayExp(languages){
     let result = []
     for (let i = 0; i < languages.length; i++){
-        languages[i].new_xps === 0 ? languages.splice(i, 1) : result[i] = languages[i];
+        languages[i].new_xps === 0 ? languages.splice(i,1) : result[i] = languages[i];
     }
-    result = [] // -> discomment to test 'not today activity' status
-    if(result.length == 0) this.onVacation();
+    // result = [] // -> discomment to test 'not today activity' status
+    if(result.length == 0) return console.log('No hay resultados')/* this.onVacation() */;
     return result
 }
 
@@ -71,11 +96,12 @@ function getTodayExp(languages){
  * @param {*} array the array to short.
  * @returns array with @number size.
  */
-function shortSizeTo(number,array){
+function sortSizeTo(number,array){
     let result = []
     for (let i = 0; i < number; i++) {
         result[i] = array[i]
     }
+    console.log(result)
     return result
 }
 
@@ -83,6 +109,9 @@ module.exports = {
     sortLanguagesByNewExp,
     sortLanguagesByTotalExp,
     getTodayExp,
-    shortSizeTo,
-    replaceKeySpaces
+    sortSizeTo,
+    replaceKeySpaces,
+    get_level,
+    get_next_level_xp,
+    get_level_progress
 }
