@@ -8,8 +8,8 @@
         </nuxt-link>
         <div class="hidden md:visible lg:block lg:ml-6 text-sm">
           <div class="flex space-x-4">
-            <nuxt-link id="nav-link" v-show="$config.projects.enabled" :to="localePath('/projects')" class="active px-3 py-2 font-bold">{{ $t('nav.projects')}}</nuxt-link>
             <nuxt-link id="nav-link" v-show="$config.uses.enabled" :to="localePath('/stats')" class="active px-3 py-2 font-bold">{{ $t('nav.uses')}}</nuxt-link>
+            <nuxt-link id="nav-link" v-show="$config.projects.enabled" :to="localePath('/projects')" class="active px-3 py-2 font-bold">{{ $t('nav.projects')}}</nuxt-link>
             <nuxt-link id="nav-link" v-show="$config.blog.enabled" :to="localePath('/blog')" class="active px-3 py-2 font-bold">{{ $t('nav.blog')}}</nuxt-link>
             <nuxt-link id="nav-link" v-show="$config.resume.enabled" :to="localePath('/resume')" class="active px-3 py-2 font-bold">{{ $t('nav.resume')}}</nuxt-link>
             <!-- <a id="nav-link" v-show="$config.buyMeACoffee.enabled" :href="$config.buyMeACoffee.url" target="_blank" rel="noreferrer" class="active px-3 py-2 text-sm font-bold">{{ $t('nav.buyMeACoffee')}}</a> -->

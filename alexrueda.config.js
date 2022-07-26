@@ -14,9 +14,9 @@ export default {
     subtext: 'Languajes and Tools i love',
     description: 'This stats are measured by codestats.net and resume my most-used development skills.',
     languages: {
-      JavaScript: {img:'/images/js.svg', color: 'yellow-300', abr:'ES12', activity:'Programming'},
+      JavaScript: {img:'/images/javascript-pixel.png', color: 'yellow-300', abr:'ES12', activity:'Programming'},
       Markdown: {img:'/images/markdown.svg', color: 'blue-300', abr:'MD', activity:'Blogging / Studing'},
-      CSS: {img:'/images/css3.svg', color: 'blue-500', abr: '3', activity: 'Styling'},
+      CSS: {img:'/images/css-pixel.png', color: 'blue-500', abr: '3', activity: 'Styling'},
       Vue: {img: '/images/vuejs.svg', color: 'green-300', abr:'JS', activity: 'Developing'},
       Ignore: {img: '/images/vuejs.svg', color: 'green-300', abr:'JS', activity: 'Ignoring files'},
       XML: {img: '/images/vuejs.svg', color: 'green-300', abr:'JS', activity: 'IDK'},
@@ -24,7 +24,7 @@ export default {
       scminput: {img: '/images/vuejs.svg', color: 'green-300', abr:'JS', activity: 'IDK'},
       Plaintext: {img: '/images/vuejs.svg', color: 'green-300', abr:'JS', activity: 'IDK'},
       JSON: {img: '/images/vuejs.svg', color: 'green-300', abr:'JS', activity: 'IDK'},
-      HTML: {img: '/images/html5.svg', color: 'green-300', abr:'JS', activity: 'Hypertexting'},
+      HTML: {img: '/images/html.png', color: 'green-300', abr:'JS', activity: 'Hypertexting'},
       DotEnv: {img: '/images/html5.svg', color: 'green-300', abr:'.env', activity: 'Enviroment'},
       XML: {img: '/images/html5.svg', color: 'green-300', abr:'xml', activity: 'Structuring data'},
       php: {img: '/images/html5.svg', color: 'green-300', abr:'xml', activity: 'Structuring data'},
@@ -98,10 +98,10 @@ export default {
     url: ''
   },
   blog: {
-    enabled: true,
+    enabled: false,
   },
   resume: {
-    enabled: true,
+    enabled: false,
     pdfUrl: '/RESUME_RUEDA_ALEX_DARK.pdf', // add files in static folder
     pdfUrlLight: '/RESUME_RUEDA_ALEX_LIGHT.pdf'
   },
