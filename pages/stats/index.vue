@@ -1,10 +1,8 @@
 <template>
     <div>
-    <h1 class="text-3xl md:text-2x1 lg:text-3x1 xl:text-2x1 font-pixel_boy text-center">
-        Stats
-    </h1>
-    <DevBoard/>
-    <Equipement/>
+      <!-- <Header title="Stats" /> -->
+      <DevBoard/>
+      <Equipement/>
   </div>
 </template>
 
@@ -14,9 +12,10 @@ import Divider from '~/components/home/Divider.vue';
 import DevBoard from '~/components/stats/DevBoard.vue';
 import Equipement from '../../components/stats/Equipement.vue';
 import Activity from '~/components/stats/Activity.vue';
+import Header from '~/components/Header.vue';
 
 export default {
-    components: { Divider, DevBoard, Equipement, Activity }
+    components: { Divider, DevBoard, Equipement, Activity, Header }
 }
 
 </script>

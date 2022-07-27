@@ -1,11 +1,11 @@
 <template>
 
-<div id="liner" class="max-w-7xl mx-auto border-l border-r sm:p-10 p-5 font-pixel_boy">
+<div id="liner" class="max-w-7xl mx-auto border-l border-r sm:p-10 p-5 font-playmegames">
     <div data-aos="zoom-in" id="liner" class=" justify-center lg:col-span-6">
 
         <div class="max-w-5xl sm:mx-auto shadow-md overflow-hidden text-lg">
 
-        <h2 class="px-2 py-1 font-pixel_boy text-xl text-gray-300">Equipement</h2>
+        <h2 class="px-2 py-1 text-md text-gray-300">EQUIPEMENT</h2>
         
             <div class="border-t-2 border-gray-600">
             <dl>

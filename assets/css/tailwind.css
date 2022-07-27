@@ -9,6 +9,12 @@
         src: url("../fonts/DisposableDroidBB.ttf") format('truetype');
     }
 
+    /* Mola */
+    @font-face {
+        font-family: 'Playmegames';
+        src: url("../fonts/PlaymegamesReguler-2OOee.ttf") format('truetype');
+    }
+    /* Mola */
     @font-face {
         font-family: "Pixelated";
         src: url("../fonts/SFPixelate.ttf") format('truetype');
@@ -28,9 +34,8 @@
         font-family: "PressStart";
         src: url("../fonts/press-start-2p.regular.ttf") format('truetype');
     }
-    /**
-     * Others
-     */
+
+    /* Mola */
     @font-face {
         font-family: "Pixel-boy";
         src: url("../fonts/Pixeboy-z8XGD.ttf") format('truetype');

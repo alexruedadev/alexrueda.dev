@@ -100,7 +100,8 @@ module.exports = {
         pixel_boy: "Pixel-boy",
         extrude: "Extrude",
         presstart: "PressStart",
-        coderscrux: "CodersCrux"
+        coderscrux: "CodersCrux",
+        playmegames: "Playmegames"
       },
     },
   },
