@@ -1,9 +1,9 @@
 <template>
-    <div id="liner" class="max-w-7xl mx-auto border-l border-r border-dashed sm:p-10 p-5 font-pixel_boy">
+    <div id="liner" class="max-w-7xl mx-auto border-l border-r sm:p-10 p-5 font-pixel_boy">
         <div class="max-w-5xl mx-auto">
 
             <!-- exp menu -->
-            <div id="exp-menu" class="border-2 border-gray-600">
+            <div data-aos="zoom-in" id="exp-menu">
 
                 <div class="flex justify-between bg-gray-800 border-b-2 border-gray-600">
                 <h2 class="pl-3 font-pixel_boy text-xl">Developer Junior</h2>
@@ -40,10 +40,10 @@
             
 
             <!-- best skills -->
-            <div class="py-10">
+            <div data-aos="zoom-in" class="pt-10">
                 <h3 class="text-gray-300 text-xl px-2 py-1 rounded-sm font-pixel_boy">Best skills</h3>
-                <div class="grid md:grid-flow-col grid-rows-3 sm:mx-auto bg-gray-100 dark:bg-gray-800 shadow-md overflow-hidden border-2 border-gray-600">
-                    <div v-for="(item, index) in skills" :class="index%2 === 0 ? 'bg-gray-100 dark:bg-gray-900' : 'bg-gray-200 dark:bg-gray-800'" class="p-3 sm:gap-4 sm:px-6 flex">
+                <div class="grid md:grid-flow-col grid-rows-3 sm:mx-auto bg-gray-100 dark:bg-gray-800 shadow-md overflow-hidden border-t-2 border-gray-600">
+                    <div v-for="(item, index) in skills" :class="index%2 === 0 ? 'bg-gray-100 dark:bg-gray-900' : 'bg-gray-200 dark:bg-gray-800'" class="p-5 sm:gap-4 sm:px-6 flex">
                         <dt class=" font-pixel_boy text-lg text-gray-400 inline-flex flex-1">
                             <p class="mr-4 text-xl text-gray-200">{{index + 1}}</p>
                             <img class="h-7 w-7 mr-3" :src="$config.skills.languages[item.name].img">

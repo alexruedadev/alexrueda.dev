@@ -1,13 +1,13 @@
 <template>
 
-<div id="liner" class="max-w-7xl mx-auto border-l border-r border-dashed sm:p-10 p-5 font-pixel_boy">
-    <div id="liner" class=" justify-center lg:col-span-6">
+<div id="liner" class="max-w-7xl mx-auto border-l border-r sm:p-10 p-5 font-pixel_boy">
+    <div data-aos="zoom-in" id="liner" class=" justify-center lg:col-span-6">
 
         <div class="max-w-5xl sm:mx-auto shadow-md overflow-hidden text-lg">
 
         <h2 class="px-2 py-1 font-pixel_boy text-xl text-gray-300">Equipement</h2>
         
-            <div>
+            <div class="border-t-2 border-gray-600">
             <dl>
                 <div v-for="(item, index) in $config.uses.meta" :class="index%2 === 0 ? 'bg-gray-100 dark:bg-gray-900' : 'bg-gray-200 dark:bg-gray-800'" class="px-3 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt class="font-medium text-gray-500">
