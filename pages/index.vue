@@ -1,10 +1,14 @@
 <template>
   <div>
     <HeroSection/>
-    <Divider/>
+    <Header title="DevBoard"/>
+    <DevBoard/>
+    <Header title="Projects"/>
+    <!-- <Projects/> -->
+<!--     <Divider/>
     <Languages/>
     <Divider2/>
-    <Frameworks/>
+    <Frameworks/> -->
     <!-- <Hardskills/>
     <Currently/>
     <LazyRecentBlog v-if="$config.blog.enabled && posts" :posts="posts"/> 
@@ -17,6 +21,9 @@ import FullStack from '~/components/home/FullStack.vue'
 import Divider from '~/components/home/Divider.vue';
 import Divider2 from '../components/home/Divider2.vue';
 import Frameworks from '../components/home/Frameworks.vue';
+import DevBoard from '~/components/stats/DevBoard.vue';
+import Header from '~/components/Header.vue';
+import Projects from '../components/home/Projects.vue';
 
 export default {
     head() {
@@ -48,7 +55,7 @@ export default {
             console.timeEnd(fetchDocsLabel);
         }
     },
-    components: { FullStack, Divider, Divider2, Frameworks }
+    components: { FullStack, Divider, Divider2, Frameworks, DevBoard, Header, Header, Projects }
 }
 </script>
 

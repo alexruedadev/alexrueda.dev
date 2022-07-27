@@ -3,7 +3,7 @@
 export default {
   name: 'Álex Rueda',
   domain: 'alexrueda.dev', // add without https:// , used in meta tags and share urls
-  image: '/images/avatar.gif',
+  image: '/images/11.png',
   email: 'me@alexrueda.dev',
   googleAnalyticsV4: {
     enabled: false,
@@ -159,7 +159,7 @@ export default {
         iBlogTech: 'I blog things',
         haveALook: 'have a look',
         friendlyNeighborhood: 'Your friendly neighborhood',
-        description: `Hey there 👋 welcome to my website. </br>My name is <b>Álex Rueda</b> and i'm <b>web developer student and freelance</b>. If you are interested in working together, have a look to my website to learn about me.`,
+        description: `My name is Alex Rueda and i'm web developer student and freelance. If you are interested in working together, have a look to my website to learn about me.`,
         words: ['Developer', 'Programmer'],
         working: {
           title: 'Working as',

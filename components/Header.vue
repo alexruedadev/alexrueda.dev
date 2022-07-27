@@ -1,6 +1,6 @@
 <template>
-    <div id="liner" class="max-w-7xl mx-auto border-l border-r sm:p-10 p-5 font-playmegames flex">
-        <h2 class="sm:text-5xl text-4xl mx-auto">
+    <div id="liner" class="max-w-7xl mx-auto p-3 font-playmegames flex bg-gray-900 border-l border-r border-gray-600">
+        <h2 class="text-2xl mx-auto">
             {{title}}
         </h2>
     </div>
