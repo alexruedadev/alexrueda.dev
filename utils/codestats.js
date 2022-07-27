@@ -23,7 +23,7 @@ const get_level_progress = (total_xp) => {
 /********************************************************************************************************/
 
 /**
- * Replace spaces in string for any character.
+ * Replace spaces at string for any character.
  * 
  * The '\s' meta character is a regular expression that matches any whitespace in JS.
  * The 'g' flag tells JavaScript to replace it multiple times.
@@ -35,14 +35,25 @@ const get_level_progress = (total_xp) => {
 const replaceKeySpaces = (key, item) => key.replace(/\s/g, item);
 
 /**
- * Sort all languages from higher to lower experience `new_xps`.
- * IMPORTANT: Create a new array with new propiety 'name' with the key name of each language (to access better later).
+ * Sort from largest to smallest experience.
  * @param {*} languages fetched from https://codestats.net/api/users/ + username.
+ * @param {*} exp Type of experience to sort by: 'new_xps' or 'xps'
+ * @returns sorted array from largest to smallest exp type.
+ */
+const orderBy = (languages, exp) => Object.values(languages).sort((a,b) => b[exp] - a[exp])
+
+/********************************************************************************************************/
+
+/** 
+ * Sort all languages from higher to lower value.
+ * IMPORTANT: Create a new array with new propiety 'name' with the key name of each language (for better access later).
+ * @param {*} languages fetched from https://codestats.net/api/users/ + username.
+ * @param {*} value 'String' with the key name of value. ['xps' or 'new_xps']
  * @returns a new array of objects with sorted languages.
  */
-function sortLanguagesByNewExp(languages){
+const sortLanguagesBy = (value, languages) => {
     let result = []
-    const orderedLangs = Object.values(languages).sort((a,b)  => b.new_xps - a.new_xps)
+    const orderedLangs = orderBy(languages, value)
     for(const value in orderedLangs){
         for (const key in languages) {
             if(languages[key] == orderedLangs[value]){
@@ -56,59 +67,38 @@ function sortLanguagesByNewExp(languages){
     return result
 }
 
-/**
- * Sort languages from higher to lower experience `new_xps`
- * @param {*} languages fetched from https://codestats.net
- * @returns array of objects with sorted languages.
- */
-function sortLanguagesByTotalExp(languages){
-    let result = []
-    const orderedLangs = Object.values(languages).sort((a,b)  => b.xps - a.xps)
-    for(const value in orderedLangs){
-        for (const key in languages) {
-            if(languages[key] == orderedLangs[value]){
-                // Check if name string contains spaces and remove it.
-                let cleanKey = key.indexOf(" ") == -1 ? cleanKey = key : cleanKey = key.replace(" ", "")
-                result.push({name:cleanKey, new_xps:orderedLangs[value].new_xps, xps:orderedLangs[value].xps})
-            }
-        }
-    }
-    return result
-}
-
-/**
+/** GET TODAY EXP
+ * 
  * Get only languages which today exp (new_xps) is not 0.
  * @param {*} languages ordered from higher to lower
  */
-function getTodayExp(languages){
+const getTodayExp = (languages) => {
     let result = []
     for (let i = 0; i < languages.length; i++){
         languages[i].new_xps === 0 ? languages.splice(i,1) : result[i] = languages[i];
     }
-    // result = [] // -> discomment to test 'not today activity' status
     if(result.length == 0) return console.log('No hay resultados')/* this.onVacation() */;
     return result
 }
 
-/**
+/** SORT ARRAY SIZE
+ * 
  * Limite the array to determinated size.
  * @param {*} number the desired size of array.
- * @param {*} array the array to short.
- * @returns array with @number size.
+ * @param {*} array the array to sort.
+ * @returns new array with @number size.
  */
-function sortSizeTo(number,array){
+const sortSizeTo = (number,array) => {
     let result = []
     for (let i = 0; i < number; i++) {
         result[i] = array[i]
     }
-    console.log(result)
     return result
 }
 
 module.exports = {
-    sortLanguagesByNewExp,
-    sortLanguagesByTotalExp,
     getTodayExp,
+    sortLanguagesBy,
     sortSizeTo,
     replaceKeySpaces,
     get_level,

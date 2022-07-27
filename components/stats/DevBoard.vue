@@ -34,7 +34,12 @@
                 </div>
                 <!-- progress bar -->
                 <div class="h-7 bg-gray-200 dark:bg-gray-700 w-full">
-                    <div id="progress-bar" class="h-7 text-md text-gray-100 text-center p-0.5 pt-1" :style="{width: levelProgress + '%'}"> {{levelProgress}} %</div>
+                    <div id="progress-bar" class="h-7 text-md text-gray-100 text-center p-0.5 pt-1" :style="{width: levelProgress + '%'}"> 
+                        
+                    </div>
+                    <span class="fixed">
+                            {{levelProgress}} %
+                    </span>
                 </div>
             </div>
             
@@ -68,27 +73,25 @@ import {
     get_level,
     get_level_progress,
     sortSizeTo,
-    sortLanguagesByTotalExp
+    sortLanguagesBy
     } from '/utils/codestats'
-
-import Divider from '~/components/home/Divider.vue';
 
 export default {
     data() {
         return {
             level: 0,
             levelProgress: 0,
-            skills: []
+            skills: [],
+            // languages: [] -> Activity
         };
     },
     methods: {
         initValues({ total_xp, new_xp, languages, dates }) {
             this.level = get_level(total_xp);
             this.levelProgress = get_level_progress(total_xp);
-            this.skills = this.sortSizeTo(6, this.sortLanguagesByTotalExp(languages));
+            // this.languages = sortLanguagesBy('new_xps', languages) -> Activity
+            this.skills = sortSizeTo(6, sortLanguagesBy('xps',languages));
         },
-        sortSizeTo,
-        sortLanguagesByTotalExp
     },
     mounted() {
         fetch(`https://codestats.net/api/users/${this.$config.social.codestats}`)
@@ -100,7 +103,6 @@ export default {
             console.error(err);
         });
     },
-    components: { Divider }
 }
 </script>
 
