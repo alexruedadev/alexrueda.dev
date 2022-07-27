@@ -1,6 +1,6 @@
 <template>
 
-<div id="liner" class="max-w-7xl mx-auto border-l border-r border-dashed p-10 font-pixel_boy">
+<div id="liner" class="max-w-7xl mx-auto border-l border-r border-dashed sm:p-10 p-5 font-pixel_boy">
     <div id="liner" class=" justify-center lg:col-span-6">
 
         <div class="max-w-5xl sm:mx-auto shadow-md overflow-hidden text-lg">

@@ -28,7 +28,7 @@
       <div id="liner" class="hidden md:flex flex-row space-x-2 items-center justify-center border-l border-t border-dashed md:border-0">
         <div v-if="$config.laguageSwitcher.enabled" class="w-5 pt-0.5 m-1">
           <nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)" class="text-gray-300 hover:text-white" >
-            <img v-if="locale.name == 'English'" src="/images/en-pixel.png" class="rounded-sm opacity-90 hover:opacity-100 transition duration-300">
+            <img v-if="locale.name == 'English'" src="/images/es.svg" class="rounded-sm opacity-90 hover:opacity-100 transition duration-300">
             <img v-else src="/images/gb.svg" class="rounded-sm opacity-90 hover:opacity-100 transition duration-300 opa">
           </nuxt-link>
         </div>

@@ -178,9 +178,10 @@ export default {
         header: 'Recent notes',
         subtext: 'tech & dev'
       },
-      uses: {
-        header: 'Stats', // 〽
-        subtext: 'Here i show you my <b>developer equipement</b>, my <b>daily code activity</b> and other interesting <b>code stats.</b>'
+      stats: {
+        header: 'Stats',
+        subheader: '',
+        info: 'Data measured by codestats.net'
       },
       projects: {
         header: 'Projects', // 🛠
@@ -353,9 +354,10 @@ export default {
         header: 'Blog', // 🖋
         subtext: 'Mi blog, mi cuaderno de notas.'
       },
-      uses: {
-        header: 'Estadísticas', // 〽 
-        subtext: 'Aqui te muestro <b>mi equipo de desarrollador</b>, mi actividad diaria y otras <b>estadísticas de desarrollo</b>. Este contenido es dinámico y varía dependiendo de lo que esté haciendo.'
+      stats: {
+        header: 'Estadísticas',
+        subheader: '',
+        info: 'Datos medidos por codestats.net'
       },
       projects: {
         header: 'Projectos', // 🛠 

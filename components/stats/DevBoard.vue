@@ -1,48 +1,48 @@
 <template>
-    <div id="liner" class="max-w-7xl mx-auto border-l border-r border-dashed p-10 font-pixel_boy">
+    <div id="liner" class="max-w-7xl mx-auto border-l border-r border-dashed sm:p-10 p-5 font-pixel_boy">
         <div class="max-w-5xl mx-auto">
-            <div class="flex justify-between">
-                <h2 class="pl-3 font-pixel_boy text-xl">Developer Junior</h2>
-                <div id="info-btn" class="w-4 h-4 mr-2 self-center">
-                    <!-- <img id="info" src="images/info.svg" alt="Page Info"/> -->
-                    <svg id="info" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                    <g>
-                        <path id="infosvg" d="M483.56,0H28.44C12.69,0,0,12.75,0,28.44v455.11C0,499.25,12.69,512,28.44,512h455.11c15.72,0,28.44-12.75,28.44-28.44
-                            V28.44C512,12.75,499.28,0,483.56,0z M455.11,455.11H56.89V56.89h398.22V455.11z"/>
-                        <path id="infosvg" d="M227.56,113.78h56.89v56.89h-56.89V113.78z M227.56,227.56h56.89v170.67h-56.89V227.56z"/>
-                    </g>
-                    </svg>
-                    <div class="hide bg-gray-700 rounded-sm p-5 bg-opacity-50 text-gray-300">
-                        Los datos estan medidos por codestats.net.
-                    </div>
-                    </div>
-                </div>
-                
 
             <!-- exp menu -->
-            <div id="exp-menu">
+            <div id="exp-menu" class="border-2 border-gray-600">
+
+                <div class="flex justify-between bg-gray-800 border-b-2 border-gray-600">
+                <h2 class="pl-3 font-pixel_boy text-xl">Developer Junior</h2>
+                <div id="info-btn" class="w-4 h-4 mr-2 self-center">
+                    <svg id="info" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <g>
+                            <path id="infosvg" d="M483.56,0H28.44C12.69,0,0,12.75,0,28.44v455.11C0,499.25,12.69,512,28.44,512h455.11c15.72,0,28.44-12.75,28.44-28.44
+                                V28.44C512,12.75,499.28,0,483.56,0z M455.11,455.11H56.89V56.89h398.22V455.11z"/>
+                            <path id="infosvg" d="M227.56,113.78h56.89v56.89h-56.89V113.78z M227.56,227.56h56.89v170.67h-56.89V227.56z"/>
+                        </g>
+                    </svg>
+                    <div class="hide bg-gray-700 rounded-sm p-5 bg-opacity-50 text-gray-300">
+                        {{ $t('stats.info') }}
+                    </div>
+                </div>
+            </div>
+
                 <!-- characters -->
                 <div class="flex justify-between">
                     <img :src="'/images/levels/' + level + '.gif'" class="w-20 h-20 p-3 m-3 rounded-sm inline-block" alt="">
                     <img :src="'/images/levels/' + (12) + '.gif'" class="w-20 h-20 p-3 m-3 rounded-sm inline-block filter grayscale opacity-50" alt="">
                 </div>
                 <!-- levels -->
-                <div class="flex w-full justify-between px-2 bg-gray-800">
+                <div class="flex w-full justify-between px-2 bg-gray-800 border-t-2 border-gray-600">
                     <p class="text-green-400 text-xl px-2 py-1 rounded-sm font-pixel_boy">Level {{level}}</p>
                     <p class="text-gray-600 text-xl px-2 py-1 rounded-sm font-pixel_boy">Level {{level + 1}}</p>
                 </div>
                 <!-- progress bar -->
-                <div class="h-7 bg-gray-200 rounded-sm dark:bg-gray-700 w-full">
-                    <div id="progress-bar" class="h-7 text-sm font-medium text-blue-100 text-center p-0.5 pt-1.5 leading-none rounded-sm font-pixelated" :style="{width: levelProgress + '%'}"> {{levelProgress}}%</div>
+                <div class="h-7 bg-gray-200 dark:bg-gray-700 w-full">
+                    <div id="progress-bar" class="h-7 text-sm text-gray-100 text-center p-0.5 pt-1 font-pixelated" :style="{width: levelProgress + '%'}"> {{levelProgress}}%</div>
                 </div>
             </div>
-
+            
 
             <!-- best skills -->
             <div class="py-10">
                 <h3 class="text-gray-300 text-xl px-2 py-1 rounded-sm font-pixel_boy">Best skills</h3>
-                <div class="grid md:grid-flow-col grid-rows-3 sm:mx-auto bg-gray-100 dark:bg-gray-800 shadow-md overflow-hidden">
+                <div class="grid md:grid-flow-col grid-rows-3 sm:mx-auto bg-gray-100 dark:bg-gray-800 shadow-md overflow-hidden border-2 border-gray-600">
                     <div v-for="(item, index) in skills" :class="index%2 === 0 ? 'bg-gray-100 dark:bg-gray-900' : 'bg-gray-200 dark:bg-gray-800'" class="p-3 sm:gap-4 sm:px-6 flex">
                         <dt class=" font-pixel_boy text-lg text-gray-400 inline-flex flex-1">
                             <p class="mr-4 text-xl text-gray-200">{{index + 1}}</p>
