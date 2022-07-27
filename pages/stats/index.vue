@@ -3,6 +3,7 @@
       <!-- <Header title="Stats" /> -->
       <DevBoard/>
       <Equipement/>
+      <Activity/>
   </div>
 </template>
 
