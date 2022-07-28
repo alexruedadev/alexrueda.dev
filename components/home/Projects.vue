@@ -1,6 +1,8 @@
 <template>
   <div id="liner" class="relative max-w-7xl border-r border-l border-dashed py-6 mx-auto">
-    
+
+    <Header title="Projects" />
+
     <div data-aos="zoom-in" class="select-none px-4 items-center justify-center sm:justify-start overflow-hidden flex pt-4">
       <nav class="flex flex-wrap items-center justify-center flex-row space-x-2 sm:space-x-4" aria-label="Tabs">
         <button @click="currentTech = tech" :class="{ 'bg-gray-900 text-gray-300': tech === currentTech }" v-for="tech in techs" :key="tech"
@@ -28,6 +30,7 @@ export default {
   computed: {
     techs() {
       let techs = []
+      console.log(this.projects)
       this.projects.forEach((project) => {
         project.tech.split(' ').forEach((tech) => {
           if (tech.trim() !== "") {

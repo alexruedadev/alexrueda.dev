@@ -1,6 +1,5 @@
 <template>
     <div>
-      <!-- <Header title="Stats" /> -->
       <DevBoard :user="$config.social.codestats"/>
       <Equipement/>
       <Activity/>
@@ -9,14 +8,12 @@
 
 <script>
 
-import Divider from '~/components/home/Divider.vue';
 import DevBoard from '~/components/stats/DevBoard.vue';
 import Equipement from '../../components/stats/Equipement.vue';
 import Activity from '~/components/stats/Activity.vue';
-import Header from '~/components/Header.vue';
 
 export default {
-    components: { Divider, DevBoard, Equipement, Activity, Header }
+    components: { DevBoard, Equipement, Activity }
 }
 
 </script>

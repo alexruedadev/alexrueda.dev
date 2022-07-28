@@ -30,6 +30,7 @@ export default {
   computed: {
     techs() {
       let techs = []
+      console.log(this.projects)
       this.projects.forEach((project) => {
         project.tech.split(' ').forEach((tech) => {
           if (tech.trim() !== "") {

@@ -3,7 +3,7 @@
 export default {
   name: 'Álex Rueda',
   domain: 'alexrueda.dev', // add without https:// , used in meta tags and share urls
-  image: '/images/avatar.png',
+  image: '/images/levels/12.gif',
   email: 'me@alexrueda.dev',
   googleAnalyticsV4: {
     enabled: false,
@@ -181,7 +181,8 @@ export default {
       stats: {
         header: 'Stats',
         subheader: '',
-        info: 'Data measured by codestats.net'
+        infoBoard: 'Data measured by codestats.net',
+        infoSkills: 'Data measured by codestats.net'
       },
       projects: {
         header: 'Projects', // 🛠

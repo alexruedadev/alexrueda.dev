@@ -2,12 +2,11 @@
   <div>
     <HeroSection/>
     <Header title="DevBoard"/>
-    <DevBoard/>
+    <DevBoard :user="$config.social.codestats"/>
     <Header title="Projects"/>
     <!-- <Projects/> -->
-<!--     <Divider/>
+<!-- 
     <Languages/>
-    <Divider2/>
     <Frameworks/> -->
     <!-- <Hardskills/>
     <Currently/>
@@ -18,8 +17,6 @@
 
 <script>
 import FullStack from '~/components/home/FullStack.vue'
-import Divider from '~/components/home/Divider.vue';
-import Divider2 from '../components/home/Divider2.vue';
 import Frameworks from '../components/home/Frameworks.vue';
 import DevBoard from '~/components/stats/DevBoard.vue';
 import Header from '~/components/Header.vue';
@@ -36,7 +33,7 @@ export default {
             posts: null
         };
     },
-    async created() {
+/*     async created() {
         const fetchDocsLabel = "fetchAllPosts";
         console.time(fetchDocsLabel);
         try {
@@ -54,8 +51,8 @@ export default {
         finally {
             console.timeEnd(fetchDocsLabel);
         }
-    },
-    components: { FullStack, Divider, Divider2, Frameworks, DevBoard, Header, Header, Projects }
+    }, */
+    components: { FullStack, Frameworks, DevBoard, Header, Header, Projects }
 }
 </script>
 

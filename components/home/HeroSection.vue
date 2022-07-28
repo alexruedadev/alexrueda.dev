@@ -3,12 +3,12 @@
     <div data-aos="zoom-in" class="lg:grid lg:grid-cols-12 max-w-5xl mx-auto py-10">
       <!-- avatar -->
       <div id="liner" class="flex justify-center lg:col-span-6 py-10">
-        <img class="sm:h-60 h-60" :src="$config.image" :alt="$config.name"/>
+        <img class="sm:h-52 h-52" :src="$config.image" :alt="$config.name"/>
       </div>
       <!-- title & description -->
       <div class="lg:col-span-6 text-center lg:text-left py-10">
           <!-- title -->
-          <h1 class="text-3xl md:text-2x1 lg:text-3x1 xl:text-2x1 font-playmegames tracking-wide">
+          <h1 class="text-3xl md:text-2x1 lg:text-3x1 xl:text-2x1 font-playmegames tracking-wide sm:m-0 m-5">
             <span>{{ $t('hero.friendlyNeighborhood') }}</span>
             <div class="pt-2">
               <vue-typer :text="$t('hero.words')"></vue-typer>

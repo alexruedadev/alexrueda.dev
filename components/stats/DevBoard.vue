@@ -41,10 +41,10 @@
                 <!-- characters -->
                 <div class="flex justify-between">
                     <div id="info">
-                        <img :src="'/images/levels/' + level + '.gif'" class="w-20 h-20 p-3 m-3 rounded-sm inline-block" alt="">
+                        <img :src="'/images/levels/' + level + '.gif'" class="w-24 p-3 m-3 rounded-sm inline-block" alt="">
                     </div>
                     
-                    <img :src="'/images/levels/' + (12) + '-inactive.png'" class="w-20 h-20 p-3 m-3 rounded-sm inline-block opacity-50" alt="">
+                    <img :src="'/images/levels/' + (level + 1) + '-next.png'" class="w-20 h-20 p-3 m-3 rounded-sm inline-block opacity-50" alt="">
                 </div>
                 <!-- levels -->
                 <div class="flex w-full justify-between px-2 bg-gray-800 border-t-2 border-gray-600">
@@ -160,7 +160,7 @@ export default {
     },
     methods: {
         initValues({ total_xp, new_xp, languages, dates }) {
-            this.level = get_level(total_xp);
+            this.level = 12
             this.levelProgress = get_level_progress(total_xp);
             this.currentLevelExp = get_next_level_xp(this.level - 1) // Exp total del último nivel
             this.haveExp = total_xp - this.currentLevelExp; // Exp total - Exp total del último nivel
