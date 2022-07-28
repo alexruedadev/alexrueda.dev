@@ -8,7 +8,7 @@
     <!-- projects -->
   <div id="liner" class="relative max-w-7xl border-r border-l border-dashed py-6 mx-auto sm:px-10 px-5">
     
-    <div data-aos="zoom-in" class="select-none px-4 items-center justify-center sm:justify-start overflow-hidden flex pt-4 ">
+    <div data-aos="zoom-in" class="select-none px-4 items-center justify-center sm:justify-start overflow-hidden flex pt-4 max-w-5xl mx-auto">
       <nav class="flex flex-wrap items-center justify-center flex-row space-x-2 sm:space-x-4" aria-label="Tabs">
         <button @click="currentTech = tech" :class="{ 'bg-gray-900 text-gray-300': tech === currentTech }" v-for="tech in techs" :key="tech"
                 class="flex text-gray-300 focus:outline-none focus:ring-transparent focus:ring-offset-transparent hover:text-hot-pink px-3 py-2 font-medium text-sm rounded-xl">
@@ -18,7 +18,9 @@
     </div>
 
     <div data-aos="zoom-in" class="mt-5 gap-4 grid lg:grid-cols-2 max-w-5xl mx-auto">
-      <ProjectCard data-aos="zoom-in" class="hover:-rotate-12" v-for="project in projectsByTechs" :key="project.slug" :project="project" />
+        <div v-for="(project, index) in projectsByTechs" :key="project.slug">
+            <ProjectCard v-if="index < 4" data-aos="zoom-in" class="hover:-rotate-12" :project="project" />
+        </div>
     </div>
   </div>
     <!-- end proyects -->
