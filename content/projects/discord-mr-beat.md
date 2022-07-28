@@ -1,6 +1,6 @@
 ---
 id: 2
-title: mr beat discord bot
+title: MR Beat - Discord bot
 description: Mr Beat is a full integrated music bot for Discord app. The first integrated reproductor that allows see the music status in realtime.
 tech: javascript
 logo: /images/projects/discord.png

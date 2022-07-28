@@ -1,9 +1,7 @@
 <template>
   <div id="liner" class="relative max-w-7xl border-r border-l border-dashed py-6 mx-auto">
-
-    <Header title="Projects" />
-
-    <div data-aos="zoom-in" class="select-none px-4 items-center justify-center sm:justify-start overflow-hidden flex pt-4">
+    
+    <div data-aos="zoom-in" class="select-none px-4 items-center justify-center sm:justify-start overflow-hidden flex pt-4 max-w-5xl">
       <nav class="flex flex-wrap items-center justify-center flex-row space-x-2 sm:space-x-4" aria-label="Tabs">
         <button @click="currentTech = tech" :class="{ 'bg-gray-900 text-gray-300': tech === currentTech }" v-for="tech in techs" :key="tech"
                 class="flex text-gray-300 focus:outline-none focus:ring-transparent focus:ring-offset-transparent hover:text-hot-pink px-3 py-2 font-medium text-sm rounded-xl">
@@ -28,6 +26,18 @@ export default {
     }
   },
   computed: {
+      async asyncData({ $content }) {
+        const fetchDocsLabel = 'fetchAllProjects'
+        console.time(fetchDocsLabel)
+        this.projects = await $content('projects')
+          .without(['body', 'toc'])
+          .sortBy('id', 'asc')
+          .fetch()
+        console.timeEnd(fetchDocsLabel)
+        return {
+
+        }
+      },
     techs() {
       let techs = []
       console.log(this.projects)
@@ -50,6 +60,7 @@ export default {
     return {
       currentTech: ALL,
       ALL: ALL, // exporting it to template
+      projects: []
     }
   },
   async asyncData({ $content }) {

@@ -9,7 +9,7 @@
               </p>
             </div>
             <nuxt-link class="group" :to="localePath(`/projects/${project.slug}`)">
-              <h3 class="mt-0.5 group-hover:text-blue-light text-md leading-7 font-pixel_boy text-gray-200">
+              <h3 class="mt-0.5 group-hover:text-blue-light text-md leading-7 font-playmegames tracking-wide text-gray-200">
                 {{ project.title }}
               </h3>
               <p class="text-xs text-gray-400">
@@ -31,8 +31,8 @@
             </a>
           </div>
         </div>
-        <div class="">
-          <img class="h-16 rounded-md " :src="project.logo" alt="logo" />
+        <div class="self-center">
+          <img class="h-16 rounded-md m-5" :src="project.logo" alt="logo" />
         </div>
       </div>
   </div>

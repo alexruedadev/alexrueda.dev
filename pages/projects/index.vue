@@ -54,6 +54,7 @@ export default {
   },
   async asyncData({ $content }) {
     const fetchDocsLabel = 'fetchAllProjects'
+    console.log('Se ha ejecutado asyncData')
     console.time(fetchDocsLabel)
     const projects = await $content('projects')
       .without(['body', 'toc'])
