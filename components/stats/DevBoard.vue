@@ -109,7 +109,7 @@
                 </div>
 
                 <div class="grid md:grid-flow-col grid-rows-3 sm:mx-auto bg-gray-100 dark:bg-gray-800 shadow-md overflow-hidden">
-                    <div v-for="(item, index) in skills" :class="index%2 === 0 ? 'bg-gray-100 dark:bg-gray-900' : 'bg-gray-200 dark:bg-gray-800'" class="p-5 sm:gap-4 sm:px-6 flex">
+                    <div  data-aos="zoom-in" v-for="(item, index) in skills" :class="index%2 === 0 ? 'bg-gray-100 dark:bg-gray-900' : 'bg-gray-200 dark:bg-gray-800'" class="p-5 sm:gap-4 sm:px-6 flex">
                         <dt class="text-lg text-gray-400 inline-flex flex-1">
                             <p class="mr-4 text-xl text-gray-200">{{index + 1}}</p>
                             <img class="h-7 w-7 mr-3" :src="$config.skills.languages[item.name].img">
@@ -160,7 +160,7 @@ export default {
     },
     methods: {
         initValues({ total_xp, new_xp, languages, dates }) {
-            this.level = 12
+            this.level = get_level(total_xp)
             this.levelProgress = get_level_progress(total_xp);
             this.currentLevelExp = get_next_level_xp(this.level - 1) // Exp total del último nivel
             this.haveExp = total_xp - this.currentLevelExp; // Exp total - Exp total del último nivel
