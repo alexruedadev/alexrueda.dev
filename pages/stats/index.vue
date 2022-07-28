@@ -1,7 +1,7 @@
 <template>
     <div>
       <!-- <Header title="Stats" /> -->
-      <DevBoard/>
+      <DevBoard :user="$config.social.codestats"/>
       <Equipement/>
       <Activity/>
   </div>

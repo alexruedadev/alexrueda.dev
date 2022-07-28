@@ -3,7 +3,7 @@
 export default {
   name: 'Álex Rueda',
   domain: 'alexrueda.dev', // add without https:// , used in meta tags and share urls
-  image: '/images/11.png',
+  image: '/images/avatar.png',
   email: 'me@alexrueda.dev',
   googleAnalyticsV4: {
     enabled: false,

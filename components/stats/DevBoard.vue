@@ -1,35 +1,79 @@
 <template>
     <div id="liner" class="max-w-7xl mx-auto border-l border-r sm:p-10 p-5 font-playmegames">
         <div class="max-w-5xl mx-auto">
-            <!-- exp menu -->
+            <!-- 
+                exp menu 
+            -->
             <div data-aos="zoom-in" id="exp-menu">
 
+                <!-- info btn -->
                 <div class="flex justify-between bg-gray-800 border-b-2 border-gray-600">
-                <h2 class="pl-3 text-md">DEVELOPER STUDENT</h2>
-                <div id="info-btn" class="w-4 h-4 mr-2 self-center">
-                    <svg id="info" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                        <g>
-                            <path id="infosvg" d="M483.56,0H28.44C12.69,0,0,12.75,0,28.44v455.11C0,499.25,12.69,512,28.44,512h455.11c15.72,0,28.44-12.75,28.44-28.44
-                                V28.44C512,12.75,499.28,0,483.56,0z M455.11,455.11H56.89V56.89h398.22V455.11z"/>
-                            <path id="infosvg" d="M227.56,113.78h56.89v56.89h-56.89V113.78z M227.56,227.56h56.89v170.67h-56.89V227.56z"/>
-                        </g>
-                    </svg>
-                    <div class="hide bg-gray-700 rounded-sm p-5 bg-opacity-50 text-gray-300">
-                        {{ $t('stats.info') }}
+                    <h2 class="pl-3 text-md">DEVELOPER STUDENT</h2>
+                    <div id="info-btn" class="w-4 h-4 mr-2 self-center">
+                        <svg id="info" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <g>
+                                <path id="infosvg" d="M483.56,0H28.44C12.69,0,0,12.75,0,28.44v455.11C0,499.25,12.69,512,28.44,512h455.11c15.72,0,28.44-12.75,28.44-28.44
+                                    V28.44C512,12.75,499.28,0,483.56,0z M455.11,455.11H56.89V56.89h398.22V455.11z"/>
+                                <path id="infosvg" d="M227.56,113.78h56.89v56.89h-56.89V113.78z M227.56,227.56h56.89v170.67h-56.89V227.56z"/>
+                            </g>
+                        </svg>
+                        <div class="hide bg-gray-800 rounded-sm p-5 bg-opacity-90 text-gray-300 mt-1.5">
+                            <span>
+                                Lvl 0 ~ 4 : Novice
+                            </span>
+                            <span>
+                                Lvl 5 ~ 14 : Developer Student
+                            </span>
+                            <span>
+                                Lvl 15 ~ 29 : Developer Junior
+                            </span>
+                            <span>
+                                Lvl 30 ~ 49 : Developer Senior
+                            </span>
+                            <span>
+                                Lvl + 50 : Developer Master
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
                 <!-- characters -->
                 <div class="flex justify-between">
-                    <img :src="'/images/levels/' + level + '.png'" class="w-20 h-20 p-3 m-3 rounded-sm inline-block" alt="">
-                    <img :src="'/images/levels/' + (12) + '.gif'" class="w-20 h-20 p-3 m-3 rounded-sm inline-block filter grayscale opacity-50" alt="">
+                    <div id="info">
+                        <img :src="'/images/levels/' + level + '.gif'" class="w-20 h-20 p-3 m-3 rounded-sm inline-block" alt="">
+                    </div>
+                    
+                    <img :src="'/images/levels/' + (12) + '-inactive.png'" class="w-20 h-20 p-3 m-3 rounded-sm inline-block opacity-50" alt="">
                 </div>
                 <!-- levels -->
                 <div class="flex w-full justify-between px-2 bg-gray-800 border-t-2 border-gray-600">
-                    <p class="text-green-400 text-md px-3 py-1 rounded-sm">Level {{level}}</p>
-                    <p class="text-gray-600 text-md px-3 py-1 rounded-sm">Level {{level + 1}}</p>
+                    <!-- current level -->
+                    <div id="info-btn">
+                        <p id="info-lvl" class="text-green-400 text-md px-3 py-1 rounded-sm">Level {{level}}</p>
+                        <div class="hide bg-gray-800 rounded-sm p-5 bg-opacity-90 text-gray-300 mt-1.5">
+                            <p>
+                                Currently exp : 
+                               <span class="text-green-400">
+                                    {{haveExp}}
+                               </span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- next level -->
+                    <div id="info-btn">
+                        <p id="info-next-lvl" class="text-gray-600 text-md px-3 py-1 rounded-sm">Level {{level + 1}}</p>
+                        <div class="hide bg-gray-800 rounded-sm p-5 bg-opacity-90 text-gray-300 mt-1.5">
+                           <p>
+                               Remaining exp : 
+                               <span class="text-green-400">
+                                   {{neededExp}}
+                                </span>
+                                
+                           </p>
+                        </div>
+                    </div>
+
                 </div>
                 <!-- progress bar -->
                 <div class="h-7 bg-gray-200 dark:bg-gray-700 w-full relative text-center text-md text-gray-100">
@@ -41,10 +85,30 @@
             </div>
             
 
-            <!-- best skills -->
+            <!-- 
+                best skills 
+            -->
             <div data-aos="zoom-in" class="pt-10">
-                <h3 class="text-gray-300 text-md px-2 py-1 rounded-sm">BEST SKILLS</h3>
-                <div class="grid md:grid-flow-col grid-rows-3 sm:mx-auto bg-gray-100 dark:bg-gray-800 shadow-md overflow-hidden border-t-2 border-gray-600">
+                <div class="flex justify-between bg-gray-800 border-b-2 border-gray-600">
+                    <h2 class="pl-3 text-md">BEST SKILLS</h2>
+
+                    <!-- info btn -->
+                    <div id="info-btn" class="w-4 h-4 mr-2 self-center">
+                        <svg id="info" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <g>
+                                <path id="infosvg" d="M483.56,0H28.44C12.69,0,0,12.75,0,28.44v455.11C0,499.25,12.69,512,28.44,512h455.11c15.72,0,28.44-12.75,28.44-28.44
+                                    V28.44C512,12.75,499.28,0,483.56,0z M455.11,455.11H56.89V56.89h398.22V455.11z"/>
+                                <path id="infosvg" d="M227.56,113.78h56.89v56.89h-56.89V113.78z M227.56,227.56h56.89v170.67h-56.89V227.56z"/>
+                            </g>
+                        </svg>
+                        <div class="hide bg-gray-700 rounded-sm p-5 bg-opacity-50 text-gray-300">
+                            {{ $t('stats.info') }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-flow-col grid-rows-3 sm:mx-auto bg-gray-100 dark:bg-gray-800 shadow-md overflow-hidden">
                     <div v-for="(item, index) in skills" :class="index%2 === 0 ? 'bg-gray-100 dark:bg-gray-900' : 'bg-gray-200 dark:bg-gray-800'" class="p-5 sm:gap-4 sm:px-6 flex">
                         <dt class="text-lg text-gray-400 inline-flex flex-1">
                             <p class="mr-4 text-xl text-gray-200">{{index + 1}}</p>
@@ -69,15 +133,27 @@
 import { 
     get_level,
     get_level_progress,
+    get_next_level_xp,
+
     sortSizeTo,
     sortLanguagesBy
     } from '/utils/codestats'
 
 export default {
+    props: {
+        user: {
+            type: String,
+            require: true
+        }
+    },
     data() {
         return {
             level: 0,
             levelProgress: 0,
+            currentLevelExp: 0,
+            haveExp: 0,
+            nextLevelExp: 0,
+            neededExp: 0,
             skills: [],
             // languages: [] -> Activity
         };
@@ -86,12 +162,16 @@ export default {
         initValues({ total_xp, new_xp, languages, dates }) {
             this.level = get_level(total_xp);
             this.levelProgress = get_level_progress(total_xp);
+            this.currentLevelExp = get_next_level_xp(this.level - 1) // Exp total del último nivel
+            this.haveExp = total_xp - this.currentLevelExp; // Exp total - Exp total del último nivel
+            this.nextLevelExp = get_next_level_xp(this.level) // Exp total del nivel actual
+            this.neededExp = this.nextLevelExp - this.currentLevelExp;
             // this.languages = sortLanguagesBy('new_xps', languages) -> Activity
             this.skills = sortSizeTo(6, sortLanguagesBy('xps',languages));
         },
     },
     mounted() {
-        fetch(`https://codestats.net/api/users/${this.$config.social.codestats}`)
+        fetch(`https://codestats.net/api/users/${this.user}`)
             .then(resp => resp.json())
             .then(data => {
             this.initValues(data);
@@ -125,16 +205,33 @@ export default {
 }
 
 #info-btn {
-    
     cursor: pointer;
 }
 
 #info:hover + .hide {
-    display: flex;
-    z-index: 0;
+    display: grid;
+    z-index: 99;
     position: relative;
-    right: 300px;
+    right: 325px;
     width: 350px;
+}
+
+#info-lvl:hover + .hide {
+    display: grid;
+    z-index: 99;
+    position: absolute;
+    left: 0px;
+    width: 200px;
+    margin: -10px;
+}
+
+#info-next-lvl:hover + .hide {
+    display: grid;
+    z-index: 99;
+    position: absolute;
+    right: 0px;
+    width: 200px;
+    margin: -10px;
 }
 
 #infosvg {
