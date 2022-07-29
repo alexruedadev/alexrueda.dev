@@ -3,7 +3,7 @@
     <VueSlickCarousel v-bind="settings">
       <div v-for="item in $config.fullstack.languages">
       <div class="flex justify-center">
-          <img :src="item.img" class="w-20" alt="">
+          <img :src="item.img" class="w-14" alt="">
       </div>
       </div>
     </VueSlickCarousel>
@@ -22,14 +22,15 @@
     data() {
       return {
         settings: {
-            "dots": false,
             "arrows": false,
+            "centerMode": true,
+            "centerPadding": "20px",
+            "focusOnSelect": true,
             "infinite": true,
-            "initialSlide": 2,
-            "speed": 500,
             "slidesToShow": 3,
-            "slidesToScroll": 1,
-            "swipeToSlide": true
+            "speed": 500,
+            "autoplay": true,
+            "autoplaySpeed": 5000,
         },
       }
     },
