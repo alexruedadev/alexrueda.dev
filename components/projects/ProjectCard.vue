@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col border-2 border-gray-700 shadow-lg overflow-hidden" >
+  <div class="flex flex-col shadow-lg overflow-hidden">
       <div class="flex-1 bg-gray-900 p-5 flex flex-row justify-between">
         <div class="flex-1 flex flex-col justify-between">
           <div>
@@ -35,7 +35,9 @@
         <div class="self-center">
           <img class="h-16 rounded-md m-5" :src="project.logo" alt="logo" />
         </div>
+        
       </div>
+      
   </div>
 </template>
 
@@ -50,5 +52,6 @@ export default {
 </script>
 
 <style scoped>
+
 
 </style>

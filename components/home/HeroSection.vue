@@ -1,5 +1,5 @@
 <template>
-  <div id="liner" class="max-w-7xl mx-auto border-l border-r">
+  <div id="liner" class="max-w-7xl mx-auto">
     <div data-aos="zoom-in" class="lg:grid lg:grid-cols-12 max-w-5xl mx-auto py-10">
       <!-- avatar -->
       <div id="liner" class="grid justify-center lg:col-span-6 py-10 text-center">

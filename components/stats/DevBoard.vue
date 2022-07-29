@@ -1,5 +1,5 @@
 <template>
-    <div id="liner" class="max-w-7xl mx-auto border-l border-r sm:p-10 p-5 font-playmegames">
+    <div id="liner" class="max-w-7xl mx-auto sm:p-10 p-5 font-playmegames">
         <div class="max-w-5xl mx-auto">
             <!-- 
                 exp menu 
