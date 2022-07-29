@@ -9,6 +9,14 @@ export default {
     enabled: false,
     id: ''
   },
+  social: {
+    github: 'alexruedadev',
+    linkedin: 'alexsrueda',
+    facebook: '',
+    twitter: 'alexruedadev',
+    instagram: 'alexrueda.dev',
+    codestats: 'alexdiple'
+  },
   skills: {
     header: 'High Skilled',
     subtext: 'Languajes and Tools i love',
@@ -36,12 +44,14 @@ export default {
   },
   fullstack: {
     languages: {
-      html: {img: '/images/html-pixel5.png', desc: 'HTML5 Description'},
-      css: {img:'/images/css-pixel.png', desc: 'CSS3 Description'},
-      javascript: {img:'/images/javascript-pixel.png', desc: 'Javascript Description'},
-      Java: {img:'/images/java-pixel2.png', desc: 'Java Description'},
-      python: {img:'/images/python-pixel.png', desc: 'Python Description'},
-      php: {img:'/images/php-pixel2.png', desc: 'PHP Description'},
+      JavaScript: {img:'/images/pixelart/javascript.png', activity:'Programming'},
+      Markdown: {img:'/images/pixelart/md.png', activity:'Blogging / Studing'},
+      HTML: {img: '/images/pixelart/html.png', activity: 'Hypertexting'},
+      CSS: {img:'/images/pixelart/css3.png', activity: 'Styling'},
+      Vue: {img: '/images/pixelart/vuejs.png', activity: 'Developing'},
+      php: {img: '/images/pixelart/php.png', activity: 'Programming'},
+      java: {img: '/images/pixelart/java.png', activity: 'Programming'},
+      python: {img: '/images/pixelart/python.png', activity: 'Programming'},
     },
     frameworks: {
       vue: {img: '/images/vuejs.svg', desc: 'HTML5 Description'},
@@ -63,36 +73,11 @@ export default {
       linux: {img: '/images/linux.svg'},
     }
   },
-  studing: {
-    header: 'studing',
-    upheader: 'never stop',
-    description: 'As every great developer, i am constantly trying to improve my knowledges about web development and related technologies with courses, blogs, and different trainings.',
-    courses: [
-      {title: 'Fundamentals of digital marketing', from: 'Google', progress: 'width: 15%', icon:'/images/google.svg', url:'https://learndigital.withgoogle.com/digitalgarage/course/digital-marketing' },
-      {title: 'Advanced Javascript', from: 'Udemy', progress: 'width: 75%', icon:'/images/udemy.svg', url:''},
-      {title: 'Higher Grade Web app development', from: 'Ceedcv', progress: 'width: 75%', icon:'/images/resume/ceed-dark.svg', url:''}
-    ]
-  },
   projects: {
     enabled: true,
   },
-  plausibleAnalytics: {
-    enabled: false,
-    domain: 'alexrueda.dev',
-    trackLocalhost: false,
-    // leave it empty if plausible is not self hosted
-    apiHost: 'https://analytics.lookatx.dev' // default: https://plausible.io
-  },
   firebase: {
     enabled: true
-  },
-  social: {
-    github: 'alexruedadev',
-    linkedin: 'alexsrueda',
-    facebook: '',
-    twitter: 'alexruedadev',
-    instagram: 'alexrueda.dev',
-    codestats: 'alexdiple'
   },
   buyMeACoffee: {
     enabled: false,
@@ -102,9 +87,16 @@ export default {
     enabled: false,
   },
   resume: {
-    enabled: false,
+    enabled: true,
     pdfUrl: '/RESUME_RUEDA_ALEX_DARK.pdf', // add files in static folder
     pdfUrlLight: '/RESUME_RUEDA_ALEX_LIGHT.pdf'
+  },
+  plausibleAnalytics: {
+    enabled: false,
+    domain: 'alexrueda.dev',
+    trackLocalhost: false,
+    // leave it empty if plausible is not self hosted
+    apiHost: 'https://analytics.lookatx.dev' // default: https://plausible.io
   },
   uses: {
     enabled: true,
@@ -174,45 +166,9 @@ export default {
         header: 'Blog', // 🖋
         subtext: 'My blog, my notebook.'
       },
-      recentBlog: {
-        header: 'Recent notes',
-        subtext: 'tech & dev'
-      },
-      stats: {
-        header: 'Stats',
-        subheader: '',
-        infoBoard: 'Data measured by codestats.net',
-        infoSkills: 'Data measured by codestats.net'
-      },
       projects: {
         header: 'Projects', // 🛠
         subtext: 'Every project has its own story and proposit.'
-      },
-      hardskills: {
-        header: 'Hardskills',
-        subtext: '{ Languajes and Tools i main }',
-        description: "These are my most-used development languages and tools. I don't say it, it does <a href='https://codestats.net/users/alexdiple'>codestats.net</a> 👈",
-      },
-      currently: {
-        header: 'Currently',
-        studing: {
-          header: 'studing',
-          upheader: 'daily',
-          description: 'As every great developer, i am constantly trying to improve my knowledges about web development and related technologies with courses, blogs, and different trainings.',
-        },
-        working: {
-          header: 'project',
-          upheader: 'free time',
-          description: 'I use to practice my learnings, building real applications that requires more difficulty to find my limits. Also, i use to try contributing to open sorce.',
-          project: {
-            title: 'Mr Beat',
-            techs: 'javascript, discordjs, react',
-            description: 'Mr Beat is a full integrated music bot for Discord app. The first integrated reproductor that allows see the music status in realtime.',
-            icon:'/images/discord-bot.png',
-            url: 'https://discord-mrbeat.com',
-            github: 'https://github.com/alexruedadev/discord-mr-beat'
-          }
-        }
       },
       button: {
         blog: 'I blog things',
@@ -222,20 +178,33 @@ export default {
       },
       resume: {
         name: 'Soriano Rueda Álex',
-        rol: 'Web developement student / Freelancer',
+        rol: 'Web developement student • Freelancer',
         address: 'Valencia, Spain',
         mail: 'me@alexrueda.dev',
         job: 'Freelancer',
         experience: {
           title: 'Work experience',
           meta: [
-            {company: 'Freelance', icon:'/images/resume/freelance.svg', url:'https://alexdiple.dev', web: 'alexrueda.dev', roll: 'freelance developer', time:'1 March, 2022 - Present • 2 months', team: '',  
-              achievements:[
-                {desc: 'Development and collaboration in open source projects. (See on Github)'},
-
-              ]
+            {
+              company: 'Freelance', 
+              icon:'/images/resume/freelance.svg', 
+              url:'https://alexdiple.dev', 
+              web: 'alexrueda.dev', 
+              roll: 'freelance developer', 
+              time:'1 March, 2022 - Present • 6 months', 
+              team: '',  
+                achievements:[
+                  {desc: 'Development and collaboration in open source projects. (See on Github)'},
+                ]
             },
-            {company: 'Tudron', icon: '/images/resume/tudron.svg', url:'https://tudron.net',web: 'tudron.net', roll: 'web developer freelance', time:'1 Jul, 2020 - 30 Jan, 2021 • about 7 months', team: '', 
+            {
+              company: 'Tudron', 
+              icon: '/images/resume/tudron.svg', 
+              url:'https://tudron.net',
+              web: 'tudron.net', 
+              roll: 'web developer freelance', 
+              time:'1 Jul, 2020 - 30 Jan, 2021 • about 7 months', 
+              team: '', 
               achievements:[
                 {desc: 'Complete web development with WordPress, coding php and using plugins as: Elementor, Yoast SEO...'},
                 {desc: 'Hosting, domain and corporative emails administration.'},
@@ -244,39 +213,58 @@ export default {
 
               ]
             },
-            {company: 'ACSE Brokerage', icon:'/images/resume/acse.svg', url:'https://acseteruel.com', web:'acseteruel.com', roll: 'freelance', time:'5 Feb, 2018 - 31 Jan, 2019 • 12 months', team: '', 
+            {
+              company: 'ACSE Brokerage', 
+              icon:'/images/resume/acse.svg', 
+              url:'https://acseteruel.com', 
+              web:'acseteruel.com', 
+              roll: 'freelance', 
+              time:'5 Feb, 2018 - 31 Jan, 2019 • 12 months', 
+              team: '', 
               achievements:[
                 {desc: 'No achievements.'}
               ]
             },
-
           ]
         },
         education: {
           title: 'Education',
           meta: [
-            {college: 'Ceedcv • Specific education center, Valencia', formation: 'Professional Training • Web App Development', time: '1 Oct, 2019 - Present', mode: 'Distance', url:'https://www.boe.es/eli/es/rd/2010/05/20/686',
-              signatures: [
-                // {title:'', description: ''},
-              ],
-              icon: '/images/resume/ceed-dark.svg',
+            {
+              college: 'Ceedcv • Specific education center, Valencia', 
+              formation: 'Professional Training • Web App Development', 
+              time: '1 Oct, 2019 - Present', 
+              mode: 'Distance', 
+              url:'https://www.boe.es/eli/es/rd/2010/05/20/686',
+                signatures: [],
+                icon: '/images/resume/ceed-dark.svg',
             },
-            {college: 'The Vines • College, Teruel', formation: 'Bachelor of Sciences • First course', time: '25 Sep, 2013 - 30 June, 2014', mode: 'Full-time', 
+            {
+              college: 'The Vines • College, Teruel', 
+              formation: 'Bachelor of Sciences • First course', 
+              time: '25 Sep, 2013 - 30 June, 2014', 
+              mode: 'Full-time', 
               signatures: [],
               icon: '/images/resume/vines.png'
-            }
+            } 
           ]
         },
         licenses: {
           title: 'Licences & Certifications',
           meta: [
-            {title: 'license title', college: 'Academy Name • Information Technology', date: 'dd mm, aaaa - dd mm, aaaa', expiration:'Expiration date', credential: '', icon: ''},
+            {
+              title: 'license title', 
+              college: 'Academy Name • Information Technology', 
+              date: 'dd mm, aaaa - dd mm, aaaa', 
+              expiration:'Expiration date', 
+              credential: '', 
+              icon: ''},
             // {title: 'license title', college: 'Udemy Academy • Information Technology', date: '27 July, 2017 - 30 June, 2021', expiration:'No expiration date', credential: '', icon: ''}
           ],
           btn: 'show credential'
         },
         skills: {
-
+          // ??
         }
       }
     },

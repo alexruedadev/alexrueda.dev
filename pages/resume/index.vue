@@ -1,11 +1,11 @@
 <template>
-  <main class="max-w-7xl px-4 mx-auto py-12 border-l border-r border-dashed border-gray-700">
+  <main class="max-w-7xl px-4 mx-auto py-12 border-l border-r border-gray-600">
     <!-- resume -->
     <div id="resume" class="max-w-5xl mx-auto">
       <!-- resume header -->
-      <div id="resume-header" class="relative h-48 border-t border-dashed border-gray-700 shadow-inner flex items-center justify-center">
-        <img src="/images/resume/freelance.svg" alt="" class="h-10 w-10 filter sepia-0">
-        <h1>{{ $t('resume.job') }}</h1>
+      <div id="resume-header" class="relative h-48 flex items-center justify-center">
+        <!-- <img src="/images/resume/freelance.svg" alt="" class="h-10 w-10 filter sepia-0 rounded-lg">
+        <h1>{{ $t('resume.job') }}</h1> -->
         <a target="_blank" rel="noreferrer" :href="$config.resume.pdfUrl" class="disabled mb-2 absolute bottom-0 right-0 inline-flex items-center px-3 py-2 border border-transparent shadow-sm text-sm leading-4 font-medium rounded-md text-white bg-gray-700 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-transparent focus:ring-hot-pink">
         PDF
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="ml-2 -mr-0.5 h-4 w-4"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -13,16 +13,19 @@
         </a>
       </div>
       <!-- resume body -->
-      <div id="resume-body" class="relative border-t border-gray-700 border-dashed">
+      <div id="resume-body" class="relative border-t-2 border-gray-600">
         <!-- avatar -->
-        <div class="-mt-24 z-40 cursor-pointer hover: image-profile h-32 w-32 overflow-hidden rounded-full shadow-md border-4 border-gray-700">
-          <img src="/images/resume/perfil-animated.png" alt="alexruedadev" class="shrink-0">
+        <div class="-mt-24 z-40 cursor-pointer h-48 w-48 overflow-hidden rounded-lg shadow-md border-2 border-gray-900">
+          <img src="/images/resume/perfil.png" alt="alexruedadev" class="shrink-0">
         </div>
         <!-- personal info -->
         <div class="grid grid-cols-3 gap-4">
           <div class="col-span-3 md:col-span-2">
-            <div class="pt-2 text-2xl font-semibold text-gray-200">
-              {{ $t('resume.name')}}
+            <div class="pt-2 text-2xl font-semibold text-gray-200 bg-gray-800">
+              <span class="font-extralight">
+                Soriano Rueda 
+              </span>
+               <span class="">Álex</span>
             </div>
             <div class="text-gray-300 text-md pt-1 lowercase">
               {{$t('resume.rol')}}
@@ -65,12 +68,19 @@
           <!-- end social -->
         </div>
         <!-- resume content -->
-        <div class="border-t border-dashed border-gray-700 mb-4 mt-2"></div>
+        <div class="border-t border-gray-600 mb-4 mt-2"></div>
         <!-- experience -->
-        <div class="pt-2 text-2xl font-semibold text-gray-200">{{ $t('resume.experience.title') }}</div>
+        <div class="pt-2 text-2xl font-semibold text-gray-200">
+          <span>
+            Work
+          </span>
+          <span>
+            experience
+          </span>
+          </div>
 
           <div v-for="item in $t('resume.experience.meta')" class="mt-6 flex flex-row space-x-4">
-            <div class="sm:h-10 sm:w-10 h-12 w-12 flex items-center justify-center rounded-sm border-gray-700 border-dashed">
+            <div class="sm:h-10 sm:w-10 h-12 w-12 flex items-center justify-center rounded-sm border-gray-600">
               <img :src="[item.icon]" class="w-10 h-10">
             </div>
             <div class="flex flex-col space-y-1">
@@ -97,12 +107,12 @@
             </div>
           </div>
         <!-- end experience -->
-        <div class="border-t border-dashed border-gray-700 my-4"></div>
+        <div class="border-t-2 border-gray-600 my-4"></div>
         <!-- education -->
         <div class="pt-2 text-2xl font-semibold text-gray-200">{{ $t('resume.education.title') }}</div>
 
           <div v-for="item in $t('resume.education.meta')" class="mt-6 flex flex-row space-x-4">
-            <div class="sm:h-10 sm:w-10 w-14 h-14 flex items-center justify-center rounded-sm border-gray-700 border-dashed">
+            <div class="sm:h-10 sm:w-10 w-14 h-14 flex items-center justify-center rounded-sm border-gray-700">
               <img :src="[item.icon]" alt="" class="h-10 w-10">
             </div>
             <div class="flex flex-col space-y-1">
@@ -125,12 +135,12 @@
             </div>
           </div> 
         <!-- end education -->
-        <div class="border-t border-dashed border-gray-700 my-4"></div>
+        <div class="border-t-2 border-gray-600 my-4"></div>
         <!-- licenses -->
         <div class="pt-2 text-2xl font-semibold text-gray-200">{{ $t('resume.licenses.title') }}</div>
 
         <div v-for="item in $t('resume.licenses.meta')" class="mt-6 flex flex-row space-x-4">
-          <div class="sm:h-10 sm:w-10 w-16 h-16 flex items-center justify-center rounded-sm border-gray-700 border-dashed">
+          <div class="sm:h-10 sm:w-10 w-16 h-16 flex items-center justify-center rounded-sm border-gray-700">
               <img :src="[item.icon]" alt="">
           </div>
           <div class="flex flex-col space-y-1">

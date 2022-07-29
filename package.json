@@ -8,7 +8,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate -m",
-    "test" : "jest"
+    "test": "jest"
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
@@ -37,6 +37,7 @@
     "vue-creator-preview": "^1.1.1",
     "vue-gtag": "^1.16.1",
     "vue-plausible": "^1.1.4",
+    "vue-slick-carousel": "^1.0.6",
     "vue-typer": "^1.2.0"
   },
   "devDependencies": {

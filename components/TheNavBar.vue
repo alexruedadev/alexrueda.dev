@@ -1,6 +1,6 @@
 <template>
 <nav class="backdrop-filter backdrop-blur sticky top-0 z-40 w-full">
-  <div id="liner" class="max-w-7xl border-l border-r border-dashed mx-auto px-2 sm:px-4 lg:px-8">
+  <div id="liner" class="max-w-7xl border-l border-r mx-auto px-2 sm:px-4 lg:px-8">
     <div class="relative flex items-center justify-between h-16">
       <div class="flex items-center px-2 lg:px-0">
         <nuxt-link :to="localePath('/')" class="flex-shrink-0">

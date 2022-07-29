@@ -1,6 +1,7 @@
 <template>
   <div>
     <HeroSection/>
+    <Carousel />
     <Header title="DevBoard"/>
     <DevBoard :user="$config.social.codestats"/>
     <Header title="Projects"/>
@@ -22,6 +23,8 @@ import Frameworks from '../components/home/Frameworks.vue';
 import DevBoard from '~/components/stats/DevBoard.vue';
 import Header from '~/components/Header.vue';
 import Projects from '../components/home/Projects.vue';
+import Slide from '~/components/home/Slide.vue';
+import Carousel from '~/components/Carousel.vue';
 
 const ALL = 'all'
 
@@ -95,7 +98,7 @@ export default {
             console.timeEnd(fetchDocsLabel);
         }
     }, */
-    components: { FullStack, Frameworks, DevBoard, Header, Header, Projects }
+    components: { FullStack, Frameworks, DevBoard, Header, Header, Projects, Slide, Carousel }
 }
 </script>
 
