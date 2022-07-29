@@ -14,7 +14,7 @@ export default {
     subtext: 'Languajes and Tools i love',
     description: 'This stats are measured by codestats.net and resume my most-used development skills.',
     languages: {
-      JavaScript: {img:'/images/pixelart/js.png', activity:'Programming'},
+      JavaScript: {img:'/images/pixelart/javascript.png', activity:'Programming'},
       Markdown: {img:'/images/pixelart/md.png', activity:'Blogging / Studing'},
       HTML: {img: '/images/pixelart/html.png', activity: 'Hypertexting'},
       CSS: {img:'/images/pixelart/css3.png', activity: 'Styling'},

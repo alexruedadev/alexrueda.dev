@@ -3,10 +3,11 @@
       <div class="flex-1 bg-gray-900 p-5 flex flex-row justify-between">
         <div class="flex-1 flex flex-col justify-between">
           <div>
-            <div class="text-xs font-medium text-hot-pink hover:text-hot-pink">
-              <p class="text-blue-light">
+            <div class="text-xs font-medium text-hot-pink hover:text-hot-pink flex">
+              <img v-for="tech in project.tech" :key="tech" :src="'/images/pixelart/' + tech + '.png'" class="w-4 h-4 mx-1" alt="">
+              <!-- <p class="text-blue-light">
                 {{ project.tech }}
-              </p>
+              </p> -->
             </div>
             <nuxt-link class="group" :to="localePath(`/projects/${project.slug}`)">
               <h3 class="mt-0.5 group-hover:text-blue-light text-md leading-7 font-playmegames tracking-wide text-gray-200">
