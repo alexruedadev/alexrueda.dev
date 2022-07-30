@@ -42,36 +42,103 @@ export default {
       XML: {img: '/images/html5.svg', activity: 'Structuring data'},
     },
   },
-  fullstack: {
+  stack: {
     languages: {
-      JavaScript: {img:'/images/pixelart/javascript.png', activity:'Programming'},
-      Markdown: {img:'/images/pixelart/md.png', activity:'Blogging / Studing'},
-      HTML: {img: '/images/pixelart/html.png', activity: 'Hypertexting'},
-      CSS: {img:'/images/pixelart/css3.png', activity: 'Styling'},
-      Vue: {img: '/images/pixelart/vuejs.png', activity: 'Developing'},
-      php: {img: '/images/pixelart/php.png', activity: 'Programming'},
-      java: {img: '/images/pixelart/java.png', activity: 'Programming'},
-      python: {img: '/images/pixelart/python.png', activity: 'Programming'},
+      JavaScript: {
+        img:'/images/pixelart/javascript.png', 
+        activity:'Programming',
+        info: 'Esta es la información de JavaScript'
+      },
+      Markdown: {
+        img:'/images/pixelart/md.png', 
+        activity:'Blogging / Studing',
+        info: 'Esta es la información de Markdown'
+      },
+      HTML: {
+        img: '/images/pixelart/html.png', 
+        activity: 'Hypertexting',
+        info: 'Esta es la información de HTML'
+      },
+      CSS: {
+        img:'/images/pixelart/css3.png', 
+        activity: 'Styling',
+        info: 'Esta es la información de CSS'
+      },
+      php: {
+        img: '/images/pixelart/php.png', 
+        activity: 'Programming',
+        info: 'Esta es la información de PHP'
+      },
+      java: {
+        img: '/images/pixelart/java.png', 
+        activity: 'Programming',
+        info: 'Esta es la información de Java'
+      },
+      python: {
+        img: '/images/pixelart/python.png', 
+        activity: 'Programming',
+        info: 'Esta es la información de Python'
+      },
     },
     frameworks: {
-      vue: {img: '/images/vuejs.svg', desc: 'HTML5 Description'},
-      react: {img: '/images/react.svg', desc: 'HTML5 Description'},
-      angular: {img: '/images/angularjs.svg', desc: 'HTML5 Description'},
+      Vue: {
+        img: '/images/pixelart/vuejs.png', 
+        activity: 'Developing',
+        info: 'Esta es la información de Vue'
+      },
+      React: {
+        img: '/images/pixelart/react.png', 
+        activity: 'Developing',
+        info: 'Esta es la información de React'
+      },
+      Angular: {
+        img: '/images/devicons/angularjs.svg', 
+        activity: 'Developing',
+        info: 'Esta es la información de Angular'
+      },
+      Tailwind: {
+        img: '/images/pixelart/tailwind.png',
+        activity: 'Styling',
+        info: 'Esta es la información de Tailwind'
+      }
     },
     databases: {
-      mysql: {img: '/images/mysql.svg', desc: 'HTML5 Description'},
-      mongodb: {img: '/images/mongodb.svg', desc: 'HTML5 Description'},
-      firebase: {img: '/images/firebase.svg', desc: 'HTML5 Description'},
+      mysql: {
+        img: '/images/devicons/mysql.svg', 
+        info: 'MySQL Description'
+      },
+      mongodb: {
+        img: '/images/devicons/mongodb.svg', 
+        info: 'MongoDb Description'
+      },
+      firebase: {
+        img: '/images/devicons/firebase.svg', 
+        info: 'Firebase Description'},
+      AWS: {
+        img: '/images/devicons/aws.png', 
+        info: 'AWS Description'},
     },
     design: {
-      photoshop: {img: '/images/photoshop.svg'},
-      figma: {img: '/images/figma.svg'},
-      xd: {img: '/images/xd.svg'},
+      photoshop: {
+        img: '/images/devicons/photoshop.svg',
+        info: 'Photoshop Description'
+      },
+      figma: {
+        img: '/images/devicons/figma.svg',
+        info: 'Figma Description'},
+      Xd: {
+        img: '/images/devicons/xd.svg',
+        info: 'XD Description'
+      },
+      illustrator: {
+        img: '/images/devicons/illustrator.png',
+        info: 'Illustrator Description'
+      }
     },
-    os: {
+/*     os: {
       windows: {img: '/images/windows.svg'},
       linux: {img: '/images/linux.svg'},
-    }
+    } */
   },
   projects: {
     enabled: true,

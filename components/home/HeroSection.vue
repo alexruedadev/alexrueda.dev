@@ -17,7 +17,7 @@
             </div>
           </h1>
           <!-- buttons -->
-          <div class="flex mx-auto my-14 font-playmegames tracking-wider text-md justify-center md:text-left">
+          <div class="flex mx-auto my-14 font-playmegames tracking-wider text-md justify-center md:justify-start">
             <button class="relative px-6 py-2 group mr-5 items-center justify-center">
                 <span class="absolute inset-0 w-full h-full transition transform translate-x-1.5 translate-y-1.5 bg-blue-medium group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
                 <span id="btn-pixel" class="absolute inset-0 w-full h-full bg-blue-first border-2 border-gray-200 group-hover:bg-blue-medium"></span>

@@ -1,6 +1,13 @@
 <template>
     <div id="liner" class="max-w-7xl mx-auto sm:p-10 p-5 font-playmegames">
         <div class="max-w-5xl mx-auto">
+            <div data-aos="zoom-in" id="liner" class="max-w-5xl mx-auto p-3 font-playmegames flex border-b-2 border-gray-400">
+                <h2 class="text-3xl mx-auto md:mx-10 tracking-wide flex">
+                    <p class="text-gray-200">Dev</p>
+                    <span class="text-blue-light">Board</span>
+                </h2>
+            </div>
+
             <!-- 
                 exp menu 
             -->
@@ -50,7 +57,7 @@
                 <div class="flex w-full justify-between px-6 bg-gray-800 border-t-2 border-gray-600"> <!--  -->
                     <!-- current level -->
                     <div id="info-btn">
-                        <p id="info-lvl" class="text-green-400 text-md px-3 py-1 rounded-sm">Level {{level}}</p>
+                        <p id="info-lvl" class="text-blue-light text-md px-3 py-1 rounded-sm">Level {{level}}</p>
                         <div class="hide bg-gray-800 rounded-sm p-5 bg-opacity-90 text-gray-300 mt-1.5">
                             <p>
                                 Currently exp : 
@@ -115,7 +122,7 @@
                             <img class="h-7 w-7 mr-3" :src="$config.skills.languages[item.name].img">
                             <p class="mt-1">{{ item.name }}</p>
                         </dt>
-                        <dt class="rounded-sm text-right text-md inline-flex bg-gray-800 text-green-400 items-center self-center leading-3 pr-2 p-0.5 pt-1">
+                        <dt class="rounded-sm text-right text-md inline-flex bg-gray-800 text-blue-light items-center self-center leading-3 pr-2 p-0.5 pt-1">
                             <svg class="h-5 w-5 -mt-1" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                             </svg>
@@ -185,7 +192,7 @@ export default {
 <style>
 
 #progress-bar {
-    @apply bg-gradient-to-r from-green-700 to-green-400
+    @apply bg-gradient-to-r from-blue-medium to-blue-light /* bg-gradient-to-r from-green-700 to-green-400 */
 }
 
 #progress-value {
