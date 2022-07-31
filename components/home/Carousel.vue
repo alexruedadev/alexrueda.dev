@@ -47,13 +47,10 @@
 <script>
   import VueSlickCarousel from 'vue-slick-carousel'
   import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-  // optional style for arrows & dots
   import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
-  console.log('Se ha ejecutado script')
-
   export default {
-    name: 'MyComponent',
+    name: 'FullStack',
     components: { VueSlickCarousel },
     data() {
       return {
@@ -67,22 +64,13 @@
             "speed": 500,
             "autoplay": true,
             "autoplaySpeed": 5000,
+            "currentSlide": 1,
         },
         stack: this.$config.stack,
-        currentStack: Object.keys(this.$config.stack)[0],
-        currentTech: Object.keys(this.$config.stack['languages']),
+        currentStack: Object.keys(this.$config.stack)[0]
       }
     },
-    mounted() {
-      console.log('mounted')
-      console.log(this.stack)
-      const carouselArrows = document.getElementsByClassName('slick-arrow')
-      /* carouselArrows.forEach(arrow => arrow.addEventListener('click', swipeStack)) */
-    },
     methods: {
-      init() {
-        console.log('carousel inited!!')
-      },
       swipeStack(){
         return this.currentStack = document.getElementsByClassName('slick-current')[0]["outerText"]
       }
@@ -94,9 +82,9 @@
 
 .cursor-grab {
   cursor: move; /* fallback if grab cursor is unsupported */
-    cursor: grab;
-    cursor: -moz-grab;
-    cursor: -webkit-grab
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab
 }
 
 .slick-arrow {
