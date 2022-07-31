@@ -9,7 +9,7 @@
         
             <div class="border-t-2 border-gray-600">
             <dl>
-                <div v-for="(item, index) in $config.uses.meta" :class="index%2 === 0 ? 'bg-gray-100 dark:bg-gray-900' : 'bg-gray-200 dark:bg-gray-800'" class="px-3 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <div v-for="(item, index) in $config.devboard.meta" :class="index%2 === 0 ? 'bg-gray-100 dark:bg-gray-900' : 'bg-gray-200 dark:bg-gray-800'" class="px-3 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt class="font-medium text-gray-500">
                     {{ item.title }}
                 </dt>

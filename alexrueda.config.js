@@ -165,7 +165,7 @@ export default {
     // leave it empty if plausible is not self hosted
     apiHost: 'https://analytics.lookatx.dev' // default: https://plausible.io
   },
-  uses: {
+  devboard: {
     enabled: true,
     meta: [
       {title: 'OS', value: 'Windows 11'},
@@ -208,7 +208,7 @@ export default {
         home: 'Home',
         blog: 'Blog',
         projects: 'Projects',
-        uses: 'Stats',
+        devboard: 'DevBoard',
         resume: 'Resume',
         buyMeACoffee: 'Buy me a coffee',
         signIn: 'Sign in',
@@ -341,7 +341,7 @@ export default {
         home: 'Home',
         blog: 'Blog',
         projects: 'Projectos',
-        uses: 'Estadísticas',
+        devboard: 'DevBoard',
         resume: 'Currículum',
         buyMeACoffee: 'Buy me a coffee',
         signIn: 'Sign in',

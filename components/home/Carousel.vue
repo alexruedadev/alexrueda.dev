@@ -10,9 +10,9 @@
 
     <!-- stack navigation -->
     <VueSlickCarousel class="max-w-xs mx-auto text-center my-5"
-      @afterChange = "afterChange"
+      @afterChange="swipeStack"
       :focusOnSelect="true">
-      <div id="stack" v-for="(item, name, index) in stack">
+      <div id="stack" v-for="(stack, name, index) in stack">
         <h3 id="currentStack" class="font-playmegames text-xl tracking-wider font-extralight">{{name}}</h3>
       </div>
     </VueSlickCarousel>
@@ -21,10 +21,9 @@
     <VueSlickCarousel 
       v-bind="settings"
       @init="init"
-      @afterChange = "afterChange"
       class="flex cursor-grab justify-items-center "><!-- border-t-2 border-gray-600 -->
 
-      <div id="tech" v-for="(tech, name, index) in $config.stack[currentStack]" class="px-2">
+      <div id="tech" v-for="(tech, name, index) in stack[currentStack]" class="px-2">
       <div class="flex justify-center bg-gray-900 py-5">
           <img :src="tech.img" class="w-11" alt="">
       </div>
@@ -68,51 +67,26 @@
             "speed": 500,
             "autoplay": true,
             "autoplaySpeed": 5000,
-            /* "fade": true, */
         },
         stack: this.$config.stack,
-        currentTechInfo: '',
-        currentStack: 'languages',
-        currentTech: 'JavaScript'
+        currentStack: Object.keys(this.$config.stack)[0],
+        currentTech: Object.keys(this.$config.stack['languages']),
       }
     },
     mounted() {
       console.log('mounted')
+      console.log(this.stack)
       const carouselArrows = document.getElementsByClassName('slick-arrow')
-      console.log(carouselArrows)
-      carouselArrows.forEach(arrow => {
-        arrow.addEventListener('click', () => {
-          this.currentStack = document.getElementsByClassName('slick-current')[0]["outerText"]
-         /*  this.currentTechInfo = this.$config.stack[this.currentStack][this.currentTech]['info'] */
-        })
-      })
-      /* next_btn.addEventListener('click', () => {
-        console.log("Click!")
-        this.currentStack = document.getElementsByClassName('slick-current')[0]["outerText"] */
-        /* this.currentTechInfo = this.$config.stack[this.currentStack].info 
-      })*/
+      /* carouselArrows.forEach(arrow => arrow.addEventListener('click', swipeStack)) */
     },
     methods: {
-
       init() {
-        /* const currentTech = document.getElementsByClassName('slick-current')[1]
-
-        console.log(currentTech) */
-      console.log('inited!!')
+        console.log('carousel inited!!')
       },
-      
-      afterChange() {
-        this.currentTech = document.getElementsByClassName('slick-current')[1]["outerText"]
-        const currentStack = document.getElementsByClassName('slick-current')[0]["outerText"]
-        const techInfoElement = document.getElementById('tech-info')
-
-        /* const techInfo = this.$config.stack[currentStack][this.currentTech]['info']
-        console.log('ahora es ' + this.currentTech + '!! // Stack: ' + currentStack)
-        console.log(techInfo)
-
-        techInfoElement.innerHTML = techInfo */
+      swipeStack(){
+        return this.currentStack = document.getElementsByClassName('slick-current')[0]["outerText"]
       }
-    }
+    },
   }
 </script>
 
@@ -129,10 +103,10 @@
   background-color: transparent !important;
 }
 
-.slick-current {
-  /* transform: scale(1.1); */
+/* .slick-current {
+  transform: scale(1.1);
   box-shadow: darkcyan 0px 0px 10px;
   transition-duration: 800ms;
-}
+} */
 
 </style>

@@ -38,7 +38,8 @@
     "vue-gtag": "^1.16.1",
     "vue-plausible": "^1.1.4",
     "vue-slick-carousel": "^1.0.6",
-    "vue-typer": "^1.2.0"
+    "vue-typer": "^1.2.0",
+    "vue3-carousel": "^0.1.40"
   },
   "devDependencies": {
     "@nuxtjs/dotenv": "^1.4.1",

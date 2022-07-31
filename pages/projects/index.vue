@@ -37,7 +37,7 @@ export default {
     techs() {
       let techs = []
       this.projects.forEach((project) => {
-        project.tech.split(' ').forEach((tech) => {
+        project.tech.forEach((tech) => {
           if (tech.trim() !== "") {
             techs.push(tech.trim())
           }

@@ -8,7 +8,7 @@
         </nuxt-link>
         <div class="hidden md:visible lg:block lg:ml-6 text-sm">
           <div class="flex space-x-4">
-            <nuxt-link id="nav-link" v-show="$config.uses.enabled" :to="localePath('/stats')" class="active px-3 py-2 font-bold">{{ $t('nav.uses')}}</nuxt-link>
+            <nuxt-link id="nav-link" v-show="$config.devboard.enabled" :to="localePath('/devboard')" class="active px-3 py-2 font-bold">{{ $t('nav.devboard')}}</nuxt-link>
             <nuxt-link id="nav-link" v-show="$config.projects.enabled" :to="localePath('/projects')" class="active px-3 py-2 font-bold">{{ $t('nav.projects')}}</nuxt-link>
             <nuxt-link id="nav-link" v-show="$config.blog.enabled" :to="localePath('/blog')" class="active px-3 py-2 font-bold">{{ $t('nav.blog')}}</nuxt-link>
             <nuxt-link id="nav-link" v-show="$config.resume.enabled" :to="localePath('/resume')" class="active px-3 py-2 font-bold">{{ $t('nav.resume')}}</nuxt-link>
@@ -107,7 +107,7 @@
             <!-- <nuxt-link exact :to="localePath('/')" class="flex px-3 py-2 rounded-md text-base font-medium focus:outline-none focus:text-gray-100 dark:text-gray-200 focus:bg-gray-500 transition duration-150 ease-in-out" role="menuitem">{{ $t('nav.home')}}</nuxt-link> -->
             <nuxt-link v-show="$config.blog.enabled" :to="localePath('/blog')" class="flex px-3 py-2 rounded-md text-base font-medium focus:outline-none text-gray-900 dark:text-gray-200 focus:text-gray-100 focus:bg-gray-500 transition duration-150 ease-in-out" role="menuitem">{{ $t('nav.blog')}}</nuxt-link>
             <nuxt-link v-show="$config.projects.enabled" :to="localePath('/projects')" class="flex px-3 py-2 rounded-md text-base font-medium focus:outline-none text-gray-900 dark:text-gray-200 focus:text-gray-100 focus:bg-gray-500 transition duration-150 ease-in-out" role="menuitem">{{ $t('nav.projects')}}</nuxt-link>
-            <nuxt-link v-show="$config.uses.enabled" :to="localePath('/stats')" class="flex px-3 py-2 rounded-md text-base font-medium focus:outline-none text-gray-900 dark:text-gray-200 focus:text-gray-100 focus:bg-gray-500 transition duration-150 ease-in-out" role="menuitem">{{ $t('nav.uses')}}</nuxt-link>
+            <nuxt-link v-show="$config.devboard.enabled" :to="localePath('/stats')" class="flex px-3 py-2 rounded-md text-base font-medium focus:outline-none text-gray-900 dark:text-gray-200 focus:text-gray-100 focus:bg-gray-500 transition duration-150 ease-in-out" role="menuitem">{{ $t('nav.devboard')}}</nuxt-link>
             <nuxt-link v-show="$config.resume.enabled" :to="localePath('/resume')" class="flex px-3 py-2 rounded-md text-base font-medium focus:outline-none text-gray-900 dark:text-gray-200 focus:text-gray-100 focus:bg-gray-500 transition duration-150 ease-in-out" role="menuitem">{{ $t('nav.resume')}}</nuxt-link>
             <!-- <a v-show="$config.buyMeACoffee.enabled" :href="$config.buyMeACoffee.url" target="_blank" rel="noreferrer" class="flex px-3 py-2 rounded-md text-base font-medium focus:outline-none dark:text-gray-200 focus:text-gray-100 focus:bg-gray-500 transition duration-150 ease-in-out" role="menuitem">{{ $t('nav.buyMeACoffee')}}</a> -->
             
