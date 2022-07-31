@@ -1,10 +1,8 @@
 <template>
   <div>
     <HeroSection/>
-    <!-- <Header title="Stack"/> -->
     <Carousel />
-   <!--  <Header title="Projects"/> -->
-    <!-- projects -->
+
     <div data-aos="zoom-in" id="liner" class="max-w-5xl mx-auto p-3 font-playmegames flex border-b-2 border-gray-400">
         <h2 class="text-3xl mx-auto md:mx-10 tracking-wide flex">
             <p class="text-gray-200">Dev</p>
@@ -25,7 +23,8 @@
           <span class="relative text-gray-300 group-hover:text-white self-center font-playmegames tracking-wider">All projects</span>
           <img src="images/pixelart/arrow-right.png" class="w-4 h-4 z-0 ml-2 self-center" alt="">
         </div>
-</button>
+      </button>
+      
     </div>
 
     <!-- <Header title="DevBoard"/> -->
@@ -40,7 +39,7 @@
 
 import DevBoard from '~/components/stats/DevBoard.vue';
 import Header from '~/components/Header.vue';
-import Carousel from '~/components/Carousel.vue';
+import Carousel from '~/components/home/Carousel.vue';
 
 const ALL = 'all'
 
@@ -114,7 +113,7 @@ export default {
             console.timeEnd(fetchDocsLabel);
         }
     }, */
-    components: {DevBoard, Header, Header, Carousel }
+    components: {DevBoard, Header, Carousel }
 }
 </script>
 
