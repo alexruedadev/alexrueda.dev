@@ -1,7 +1,7 @@
 <template>
     <div id="liner" class="max-w-7xl mx-auto sm:p-10 p-5 font-playmegames">
         <div class="max-w-5xl mx-auto">
-            <div data-aos="zoom-in" id="liner" class="max-w-5xl mx-auto p-3 font-playmegames flex border-b-2 border-gray-400">
+            <div data-aos="zoom-in" id="liner" class="max-w-5xl mx-auto p-3 font-playmegames flex">
                 <h2 class="text-3xl mx-auto md:mx-10 tracking-wide flex">
                     <p class="text-gray-200">Dev</p>
                     <span class="text-blue-light">Board</span>
