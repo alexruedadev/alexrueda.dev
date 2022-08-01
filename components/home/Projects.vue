@@ -8,7 +8,7 @@
       </div>
     <div data-aos="zoom-in" class="mt-5 gap-4 grid lg:grid-cols-2 max-w-5xl mx-auto px-10 md:px-0">
       <div v-for="(project, index) in projectsByTechs" :key="project.slug">
-        <ProjectCard v-if="index < 4" data-aos="zoom-in" class="" :project="project" />
+        <PixelProjectCard v-if="index < 4" data-aos="zoom-in" class="" :project="project" />
       </div>
     </div>
     <div class="mx-auto max-w-5xl flex justify-center my-10">
@@ -29,6 +29,8 @@
 
 <script>
 
+import PixelProjectCard from '~/pages/lab/components/pixelprojectcard/PixelProjectCard.vue'
+
 export default {
     props: {
         projectsByTechs: {
@@ -36,6 +38,9 @@ export default {
             required: true
         }
     },
+    components: {
+        PixelProjectCard
+    }
 }
 </script>
 

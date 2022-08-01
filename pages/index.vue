@@ -29,6 +29,7 @@ export default {
     },
     computed: {
       projectsByTechs() {
+        console.log(this.projects[0])
         if (this.currentTech === ALL) return this.projects
         return this.projects.filter(project => project.tech.includes(this.currentTech))
       }
