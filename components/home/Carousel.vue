@@ -65,6 +65,7 @@
             "autoplay": true,
             "autoplaySpeed": 5000,
             "currentSlide": 1,
+            "centerPadding": "50px",
         },
         stack: this.$config.stack,
         currentStack: Object.keys(this.$config.stack)[0]

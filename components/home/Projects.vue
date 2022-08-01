@@ -1,14 +1,14 @@
 <template>
-  <div>
-        <div data-aos="zoom-in" id="liner" class="max-w-5xl mx-auto p-3 font-playmegames flex border-b-2 border-gray-400">
+  <div class="max-w-5xl mx-auto">
+        <div data-aos="zoom-in" id="liner" class=" p-3 font-playmegames flex border-b-2 border-gray-400">
         <h2 class="text-3xl mx-auto md:mx-10 tracking-wide flex">
             <p class="text-gray-200">Dev</p>
             <span class="text-blue-light">Projects</span>
         </h2>
       </div>
-    <div data-aos="zoom-in" class="mt-5 gap-4 grid lg:grid-cols-2 max-w-5xl mx-auto px-10 md:px-0">
+    <div data-aos="zoom-in" class="mt-5 gap-4 grid lg:grid-cols-2 px-10 md:px-0">
       <div v-for="(project, index) in projectsByTechs" :key="project.slug">
-        <PixelProjectCard v-if="index < 4" data-aos="zoom-in" class="" :project="project" />
+        <ProjectCard v-if="index < 4" data-aos="zoom-in" class="" :project="project" />
       </div>
     </div>
     <div class="mx-auto max-w-5xl flex justify-center my-10">
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-
+import ProjectCard from '../projects/ProjectCard.vue'
 import PixelProjectCard from '~/pages/lab/components/pixelprojectcard/PixelProjectCard.vue'
 
 export default {

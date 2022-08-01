@@ -168,12 +168,14 @@ export default {
   devboard: {
     enabled: true,
     meta: [
-      {title: 'OS', value: 'Windows 11'},
-      {title: 'Memory', value: '32 GB 5200 MHz DDR5'},
-      {title: 'Keyboard', value: 'Logitech G915 TKL Gaming - Wireless Lightspeed'},
-      {title: 'Mouse', value: 'Logitech G703 - Wireless Lightspeed'},
-      {title: 'Monitor', value: 'Lenovo QHD (2560 x 1440) 24 Inch IPS Display'},
-      {title: 'Laptop', value: 'Notebook HP Envy - Intel i7 - Nvidia...'}
+      {title: 'OS', value: 'Windows 11', extra:'', img: '/images/pixelart/monitor.png'},
+      {title: 'Memory', value: '32 GB 5200 MHz DDR5', img: '/images/pixelart/monitor.png'},
+      {title: 'Keyboard', value: 'Logitech G915 TKL', extra:'Wireless Lightspeed', img: '/images/pixelart/keyboard.png'},
+      {title: 'Mouse', value: 'Logitech G703', extra: 'Wireless Lightspeed', img: '/images/pixelart/mouse.png'},
+      {title: 'Monitor', value: 'Lenovo QHD', extra: '(2560 x 1440) 24 Inch IPS Display', img: '/images/pixelart/monitor.png'},
+      {title: 'Laptop', value: 'Notebook HP Envy', extra: 'Intel i7 - Nvidia', img: '/images/pixelart/laptop.png'},
+      {title: 'Headphones', value: 'Beats SOLO 3', extra: 'Wireless', img: '/images/pixelart/monitor.png'},
+      {title: 'Microphone', value: 'BC Master', extra: '??', img: '/images/pixelart/monitor.png'}
     ]
   },
   recommendations: {
