@@ -1,7 +1,7 @@
 <template>
   <div>
     <Hero />
-    <Carousel />
+    <!-- <Carousel /> -->
     <Projects :projectsByTechs="projectsByTechs" />
     <DevBoard :user="$config.social.codestats"/>
   </div>

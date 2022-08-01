@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div id="liner" class="max-w-7xl mx-auto px-4">
+    <div id="liner" class="max-w-5xl mx-auto px-4">
       <div class="pt-5 pb-12 md:flex md:justify-between">
         <div class="flex space-x-6 md:order-2 justify-center">
           <a v-if="$config.social.facebook" target="_blank" rel="noreferrer"  :href="`https://facebook.com/${$config.social.facebook}`" class="text-gray-400 hover:text-gray-300">

@@ -1,13 +1,43 @@
 <template>
     <div id="liner" class="max-w-7xl mx-auto sm:p-10 p-5 font-playmegames">
         <div class="max-w-5xl mx-auto">
-            <div data-aos="zoom-in" id="liner" class="max-w-5xl mx-auto p-3 font-playmegames flex border-b-2 border-gray-600">
+            <div data-aos="zoom-in" id="liner" class="max-w-5xl mx-auto p-10 font-playmegames flex justify-center">
                 <h2 class="text-3xl mx-auto md:mx-10 tracking-wide flex">
                     <p class="text-gray-200">Dev</p>
                     <span class="text-blue-light">Board</span>
                 </h2>
             </div>
-
+                                            <!-- info btn -->
+                <div class="flex justify-between bg-gray-800 border-b-2 border-gray-600"> <!-- -->
+                    <h2 class="pl-3 pt-2 text-md">DEVELOPER STUDENT</h2>
+                    <div id="info-btn" class="w-4 h-4 mr-2 self-center">
+                        <svg id="info" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <g>
+                                <path id="infosvg" d="M483.56,0H28.44C12.69,0,0,12.75,0,28.44v455.11C0,499.25,12.69,512,28.44,512h455.11c15.72,0,28.44-12.75,28.44-28.44
+                                    V28.44C512,12.75,499.28,0,483.56,0z M455.11,455.11H56.89V56.89h398.22V455.11z"/>
+                                <path id="infosvg" d="M227.56,113.78h56.89v56.89h-56.89V113.78z M227.56,227.56h56.89v170.67h-56.89V227.56z"/>
+                            </g>
+                        </svg>
+                        <div class="hide bg-gray-800 rounded-sm p-5 bg-opacity-90 text-gray-300 mt-1.5">
+                            <span>
+                                Lvl 0 ~ 4 : Novice
+                            </span>
+                            <span>
+                                Lvl 5 ~ 14 : Developer Student
+                            </span>
+                            <span>
+                                Lvl 15 ~ 29 : Developer Junior
+                            </span>
+                            <span>
+                                Lvl 30 ~ 49 : Developer Senior
+                            </span>
+                            <span>
+                                Lvl + 50 : Developer Master
+                            </span>
+                        </div>
+                    </div>
+                </div>
             <!-- 
                 exp menu 
             -->
@@ -58,37 +88,7 @@
                     </span>
                 </div>
 
-                                <!-- info btn -->
-                <div class="flex justify-between bg-gray-800 border-b-2 border-gray-600"> <!-- -->
-                    <h2 class="pl-3 pt-2 text-md">DEVELOPER STUDENT</h2>
-                    <div id="info-btn" class="w-4 h-4 mr-2 self-center">
-                        <svg id="info" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                            <g>
-                                <path id="infosvg" d="M483.56,0H28.44C12.69,0,0,12.75,0,28.44v455.11C0,499.25,12.69,512,28.44,512h455.11c15.72,0,28.44-12.75,28.44-28.44
-                                    V28.44C512,12.75,499.28,0,483.56,0z M455.11,455.11H56.89V56.89h398.22V455.11z"/>
-                                <path id="infosvg" d="M227.56,113.78h56.89v56.89h-56.89V113.78z M227.56,227.56h56.89v170.67h-56.89V227.56z"/>
-                            </g>
-                        </svg>
-                        <div class="hide bg-gray-800 rounded-sm p-5 bg-opacity-90 text-gray-300 mt-1.5">
-                            <span>
-                                Lvl 0 ~ 4 : Novice
-                            </span>
-                            <span>
-                                Lvl 5 ~ 14 : Developer Student
-                            </span>
-                            <span>
-                                Lvl 15 ~ 29 : Developer Junior
-                            </span>
-                            <span>
-                                Lvl 30 ~ 49 : Developer Senior
-                            </span>
-                            <span>
-                                Lvl + 50 : Developer Master
-                            </span>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             
             <Equipement />
