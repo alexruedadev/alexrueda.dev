@@ -23,68 +23,79 @@
                 </div>
 
         <div data-aos="zoom-in">
-            <div class="w-full grid grid-cols-3 text-lg">
+            <!-- <div class="w-full grid grid-cols-3 text-lg">
                 <h3 class="ml-4">Skill</h3>
                 <h3 class="ml-3">Action</h3>
                 <h3 class="mr-4 text-right">Today XP</h3>
-            </div>
+            </div> -->
 
-            <div class="max-w-5xl sm:mx-auto bg-gray-100 dark:bg-gray-800 shadow-md overflow-hidden">
+            <div v-if="todayHaveXps === true" class="max-w-5xl sm:mx-auto bg-gray-100 dark:bg-gray-800 shadow-md overflow-hidden">
                 <dl>
-                    <div v-for="(item, index) in languages" :class="index%2 === 0 ? 'bg-gray-100 dark:bg-gray-900' : 'bg-gray-200 dark:bg-gray-800'" class="p-3 grid grid-cols-3 sm:gap-4 sm:px-6 text-lg">
-
-                    <dt class="text-gray-500 inline-flex align-middle">
+                    <div data-aos="zoom-in" v-for="(item, index) in languages" :class="index%2 === 0 ? 'bg-gray-100 dark:bg-gray-900' : 'bg-gray-200 dark:bg-gray-800'" class="p-5 grid grid-cols-2 sm:gap-4 sm:px-6 text-lg">
+                    <dt class="text-gray-500 text-center sm:text-left mt-1 flex">
+                        {{ $config.skills.languages[item.name].activity }} with 
+                        <img class="h-6 w-6 ml-3" :src="$config.skills.languages[item.name].img">
+                    </dt> 
+                    <!-- <dt class="text-gray-500 inline-flex align-middle">
                         <img class="rounded-md h-7 w-7 mr-3" :src="$config.skills.languages[item.name].img">
                         <p class="mt-1">{{ item.name }}</p>
-                    </dt>
-                    <dt class="text-gray-500 text-center sm:text-left mt-1">
-                        {{ $config.skills.languages[item.name].activity }}
-                    </dt> 
-                    <dt class="text-gray-500 text-right lg:mt-1">
-                        <div class="mt-1 ml-1 inline-flex items-baseline px-2.5 leading-5 bg-gray-800 text-green-400 lg:mt-0">
-                            <svg class="-ml-1 mr-0.5 flex-shrink-0 self-center h-5 w-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                    </dt> -->
+                    
+                    <dt class="text-gray-500 text-right lg:mt-1 rounded-sm text-md items-center self-center leading-3 pr-2 p-0.5 pt-1">
+                        <div class="pt-1 inline-flex items-baseline px-2.5 leading-5 bg-gray-800 text-green-400 lg:mt-0">
+                            <svg class="self-center h-5 w-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                             </svg>
                             {{ item.new_xps }} 
                         </div>
+
+                        <!-- <dt class="rounded-sm text-right text-md inline-flex bg-gray-800 text-green-400 items-center self-center leading-3 pr-2 p-0.5 pt-1">
+                            <svg class="h-5 w-5 -mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            {{ item.xps }}
+                        </dt> -->
                         
                     </dt>
                     </div>
                 </dl>
             </div>
+            <!-- No activity found -->
+            <div v-else>
+                <p class="text-center text-gray-500">No XPs today</p>
+            </div>
         </div>
       </div>
 
-      <GithubHeatmap :username="'alexruedadev'" />
+      
     </div>
 </template>
 
 <script>
 
-import GithubCalendarVue from './GithubHeatmap.vue';
-
 import {
     sortLanguagesBy,
     getTodayExp,
     } from '/utils/codestats'
-import GithubHeatmap from './GithubHeatmap.vue'
 
     export default {
     data() {
         return {
-            totalXP: 0,
-            newXP: 0,
-            level: 0,
-            nextLvlExp: 0,
-            levelProgress: 0,
             languages: [],
-            skills: []
+            todayHaveXps: [],
+            newXps: 0,
         };
     },
     methods: {
         initValues({ total_xp, new_xp, languages, dates }) {
+            // today date
+            var todayDate = new Date().toISOString().slice(0, 10);
+            // today xps
             this.languages = getTodayExp(sortLanguagesBy("new_xps", languages));
-            console.log(this.languages);
+            // Check if today have xps
+            this.todayHaveXps = Object.keys(dates).filter(date => date === todayDate).length !== 0 ? true : false
+            // new xps
+            this.newXps = new_xp;
         },
     },
     mounted() {
@@ -92,17 +103,79 @@ import GithubHeatmap from './GithubHeatmap.vue'
             .then(resp => resp.json())
             .then(data => {
             this.initValues(data);
-            console.log(data);
         })
             .catch(err => {
             console.error(err);
         });
     },
-    components: { GithubHeatmap }
 }
 
 </script>
 
-<style>
+<style scoped>
+
+/* Github Calendar Styles */
+
+::v-deep rect.ContributionCalendar-day[data-level='0'] {
+  @apply fill-current text-gray-900;
+}
+
+::v-deep rect.ContributionCalendar-day[data-level='1'] {
+  fill: rgb(14, 68, 41);
+}
+
+::v-deep rect.ContributionCalendar-day[data-level='2'] {
+  fill: rgb(0, 109, 50);
+}
+
+::v-deep rect.ContributionCalendar-day[data-level='3'] {
+  fill: rgb(38, 166, 65);
+}
+
+::v-deep rect.ContributionCalendar-day[data-level='4'] {
+  fill: rgb(57, 211, 83);
+}
+
+::v-deep .graph-before-activity-overview {
+  border: none;
+}
+
+.calendar {
+  border: none;
+}
+
+.calendar ::v-deep .width-full > .float-right {
+  @apply text-sm text-gray-400 flex flex-row items-center justify-center px-4;
+}
+
+.calendar ::v-deep .width-full > .float-right svg {
+  @apply mx-0.5;
+}
+
+
+.calendar ::v-deep .width-full > .float-left {
+  @apply flex items-center justify-center;
+}
+
+.calendar ::v-deep .width-full > .float-left a {
+  @apply pl-8 text-sm text-gray-400 hover:text-indigo-500;
+}
+
+::v-deep text.ContributionCalendar-label {
+  font-size: 9px;
+  @apply text-gray-500;
+}
+
+::v-deep .contrib-column {
+  @apply border-none;
+}
+
+::v-deep .contrib-number {
+  @apply text-gray-200 font-bold;
+}
+
+::v-deep .text-muted {
+  @apply text-gray-300;
+}
 
 </style>

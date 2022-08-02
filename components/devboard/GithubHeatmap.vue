@@ -26,7 +26,7 @@ export default {
         GitHubCalendar
     },
     mounted() {
-        GitHubCalendar(".calendar", this.$config.social.github, { responsive: true, tooltips: false });
+        GitHubCalendar(".calendar", this.$config.social.github, { responsive: true, tooltips: false, global_stats: false });
     }
 }
 </script>

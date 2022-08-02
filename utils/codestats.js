@@ -103,5 +103,5 @@ module.exports = {
     replaceKeySpaces,
     get_level,
     get_next_level_xp,
-    get_level_progress
+    get_level_progress,
 }
