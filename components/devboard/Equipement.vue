@@ -59,10 +59,10 @@
 </template>
 
 <script>
-  import VueSlickCarousel from 'vue-slick-carousel'
-  import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-  import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
-
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+    
 export default {
     name: 'Equipement',
     props: {
@@ -98,25 +98,22 @@ export default {
       },
     },
     mounted(){
-        const arrows = document.getElementById('arrow')
-
-/*         arrows.addEventListener('mouseover', (event) => {
-            event.preventDefault();
-            return arrows.setAttribute('fill','#0fcbe9')
-        });
-
-        arrows.addEventListener('mouseout', (event) => {
-            event.preventDefault();
-            return arrows.setAttribute('fill','#fefffe')
-        });
- */
-        window.onresize = () => {
-                if(window.innerWidth < 768){
-                    this.settings.slidesToShow = 1;
-                }else{
-                    this.settings.slidesToShow = 3;
-                }
+        window.onload = () => {
+            console.log('Loaded on mobile!')
+            if(window.innerWidth < 768){
+                
+                this.settings.slidesToShow = 1;
+            }else{
+                this.settings.slidesToShow = 3;
             }
+        }
+        window.onresize = () => {
+            if(window.innerWidth < 768){
+                this.settings.slidesToShow = 1;
+            }else{
+                this.settings.slidesToShow = 3;
+            }
+        }
     },
     components: {
         VueSlickCarousel

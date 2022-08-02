@@ -173,7 +173,7 @@ export default {
         });
     },
     components: {
-    Equipement,
+        Equipement,
     }
 }
 </script>
