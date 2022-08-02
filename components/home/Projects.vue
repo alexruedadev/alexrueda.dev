@@ -14,11 +14,11 @@
     <div class="mx-auto max-w-5xl flex justify-center my-10">
       
       <button class="relative px-6 py-2 group mr-5 items-center justify-center ">
-        <span class="absolute inset-0 w-full h-full transition transform translate-x-1.5 translate-y-1.5 bg-gray-700 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-        <span id="btn-pixel" class="absolute inset-0 w-full h-full border-2 bg-gray-900 border-gray-600  group-hover:bg-blue-medium"></span>
+        <span class="absolute inset-0 w-full h-full transition transform translate-x-1.5 translate-y-1.5 bg-blue-light group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+        <span id="btn-pixel" class="absolute inset-0 w-full h-full border-2 bg-gradient-to-r from-blue-first to-blue-medium border-gray-200 group-hover:bg-blue-medium"></span>
         <div class="flex">
-          <span class="relative text-gray-300 group-hover:text-white self-center font-playmegames tracking-wider">All projects</span>
-          <img src="images/pixelart/arrow-right.png" class="w-4 h-4 z-0 ml-2 self-center" alt="">
+          <span class="relative text-gray-100 group-hover:text-white self-center font-playmegames tracking-wide">All projects</span>
+          <img src="images/pixelart/arrow-r.png" class="w-3 h-3 z-0 ml-2 self-center" alt="">
         </div>
       </button>
       
@@ -28,8 +28,6 @@
 </template>
 
 <script>
-import ProjectCard from '../projects/ProjectCard.vue'
-import PixelProjectCard from '~/pages/lab/components/pixelprojectcard/PixelProjectCard.vue'
 
 export default {
     props: {
@@ -38,9 +36,6 @@ export default {
             required: true
         }
     },
-    components: {
-        PixelProjectCard
-    }
 }
 </script>
 

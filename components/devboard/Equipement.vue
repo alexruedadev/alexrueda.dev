@@ -13,7 +13,7 @@
                             </g>
                         </svg>
                         <div class="hide bg-gray-800 rounded-sm p-5 bg-opacity-90 text-gray-300 mt-1.5">
-                            <p>equipement.info</p>
+                            <p v-html="$t('devboard.equipement.info')"></p>
                         </div>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
         
 
         <VueSlickCarousel ref="carousel" v-bind="settings" class="max-w-5xl mx-auto font-playmegames text-center">
-            <div v-for="(item, index) in $config.devboard.meta" class="dark:bg-gray-900 p-2 border-2 border-gray-800 dark:hover:bg-gray-700 cursor-grab">
+            <div v-for="(item, index) in equipement" class="dark:bg-gray-900 p-2 border-2 border-gray-800 dark:hover:bg-gray-700 cursor-grab">
                 <div class="flex">
                     <img :src="item.img" class="w-10 mx-auto m-2" alt="">
                 </div>
@@ -67,7 +67,7 @@ export default {
     name: 'Equipement',
     props: {
         equipement: {
-            type: Object,
+            type: Array,
             required: true
         }
     },

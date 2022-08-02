@@ -8,7 +8,7 @@
                 </h2>
             </div>
                                             <!-- info btn -->
-                <div class="flex justify-between bg-gray-800 border-b-2 border-gray-600"> <!-- -->
+                <div data-aos="zoom-in" class="flex justify-between bg-gray-800 border-b-2 border-gray-600"> <!-- -->
                     <h2 class="pl-3 pt-2 text-md">DEVELOPER STUDENT</h2>
                     <div id="info-btn" class="w-4 h-4 mr-2 self-center">
                         <svg id="info" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -20,21 +20,7 @@
                             </g>
                         </svg>
                         <div class="hide bg-gray-800 rounded-sm p-5 bg-opacity-90 text-gray-300 mt-1.5">
-                            <span>
-                                Lvl 0 ~ 4 : Novice
-                            </span>
-                            <span>
-                                Lvl 5 ~ 14 : Developer Student
-                            </span>
-                            <span>
-                                Lvl 15 ~ 29 : Developer Junior
-                            </span>
-                            <span>
-                                Lvl 30 ~ 49 : Developer Senior
-                            </span>
-                            <span>
-                                Lvl + 50 : Developer Master
-                            </span>
+                            <p v-html="$t('devboard.equipement.info')"></p>
                         </div>
                     </div>
                 </div>
@@ -91,7 +77,7 @@
 
             </div>
             
-            <Equipement />
+            <Equipement :equipement="equipement" />
             <!-- 
                 best skills 
             -->
@@ -109,8 +95,8 @@
                                 <path id="infosvg" d="M227.56,113.78h56.89v56.89h-56.89V113.78z M227.56,227.56h56.89v170.67h-56.89V227.56z"/>
                             </g>
                         </svg>
-                        <div class="hide bg-gray-700 rounded-sm p-5 bg-opacity-50 text-gray-300">
-                            {{ $t('stats.info') }}
+                        <div class="hide bg-gray-800 rounded-sm p-5 bg-opacity-90 text-gray-300 mt-1.5">
+                            <p v-html="$t('devboard.bestskills.info')"></p>
                         </div>
                     </div>
                 </div>
@@ -140,12 +126,11 @@ import {
     get_level,
     get_level_progress,
     get_next_level_xp,
-
     sortSizeTo,
     sortLanguagesBy
     } from '/utils/codestats'
 
-    import Equipement from '~/pages/lab/sections/equipement/Equipement.vue';
+import Equipement from './Equipement.vue';
 
 export default {
     props: {
@@ -160,10 +145,10 @@ export default {
             levelProgress: 0,
             currentLevelExp: 0,
             haveExp: 0,
-            nextLevelExp: 0,
             neededExp: 0,
+            nextLevelExp: 0,
             skills: [],
-            // languages: [] -> Activity
+            equipement: this.$config.devboard.meta
         };
     },
     methods: {
@@ -174,7 +159,6 @@ export default {
             this.haveExp = total_xp - this.currentLevelExp; // Exp total - Exp total del último nivel
             this.nextLevelExp = get_next_level_xp(this.level) // Exp total del nivel actual
             this.neededExp = this.nextLevelExp - this.currentLevelExp;
-            // this.languages = sortLanguagesBy('new_xps', languages) -> Activity
             this.skills = sortSizeTo(6, sortLanguagesBy('xps',languages));
         },
     },
@@ -190,8 +174,7 @@ export default {
     },
     components: {
     Equipement,
-    Equipement
-}
+    }
 }
 </script>
 

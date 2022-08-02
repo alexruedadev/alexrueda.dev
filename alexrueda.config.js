@@ -26,17 +26,19 @@ export default {
       Markdown: {img:'/images/pixelart/md.png', activity:'Blogging / Studing'},
       HTML: {img: '/images/pixelart/html.png', activity: 'Hypertexting'},
       CSS: {img:'/images/pixelart/css3.png', activity: 'Styling'},
+      PostCSS: {img:'/images/pixelart/css3.png', activity: 'Styling'},
       Vue: {img: '/images/pixelart/vuejs.png', activity: 'Developing'},
       php: {img: '/images/pixelart/php.png', activity: 'Programming'},
       java: {img: '/images/pixelart/java.png', activity: 'Programming'},
       python: {img: '/images/pixelart/python.png', activity: 'Programming'},
+      Plaintext: {img: '/images/pixelart/Plaintext.png', activity: 'IDK'},
       /* edit from here */
       sql: {img: '/images/html5.svg', activity: 'Structuring data'},
       Ignore: {img: '/images/vuejs.svg', activity: 'Ignoring files'},
-      XML: {img: '/images/vuejs.svg', activity: 'IDK'},
+      XML: {img: '/images/XML.svg', activity: 'IDK'},
       YAML: {img: '/images/vuejs.svg', activity: 'IDK'},
       scminput: {img: '/images/vuejs.svg', activity: 'IDK'},
-      Plaintext: {img: '/images/vuejs.svg', activity: 'IDK'},
+      
       JSON: {img: '/images/pixelart/json.png', activity: 'IDK'},
       DotEnv: {img: '/images/html5.svg', activity: 'Enviroment'},
       XML: {img: '/images/html5.svg', activity: 'Structuring data'},
@@ -167,6 +169,7 @@ export default {
   },
   devboard: {
     enabled: true,
+    info: `Datos recogidos por codestats.net. </br>Medidos en VS Code. </br>Para más información visita: <a href="https://codestats.net/alexdiple" target="_blank">https://codestats.net/alexdiple</a>`,
     meta: [
       {title: 'OS', value: 'Windows 11', extra:'', img: '/images/pixelart/monitor.png'},
       {title: 'Memory', value: '32 GB 5200 MHz DDR5', img: '/images/pixelart/monitor.png'},
@@ -226,6 +229,17 @@ export default {
           title: 'Working as',
           job: 'Freelancer',
         },
+      },
+      devboard: {
+        bestskills: {
+          info: `Datos recogidos por <a href="https://codestats.net/alexdiple" target="_blank">codestats.net</a> </br>Medidos en VS Code.`
+        },
+        experience: {
+          info: `Lvl 0 ~ 4 : Novice </br> Lvl 5 ~ 14 : Developer Student</br>Lvl 15 ~ 29 : Developer Junior </br>Lvl 30 ~ 49 : Developer Senior</br> Lvl + 50 : Developer Master`,
+        },
+        equipement: {
+          info: `Set of components i wield to develop day by day.`
+        }
       },
       githubCalendar: {
         header: 'Github',
@@ -416,6 +430,9 @@ export default {
         header: 'Estadísticas',
         subheader: '',
         info: 'Datos medidos por codestats.net'
+      },
+      equipement: {
+        info: `Set of components i wield to develop day by day.`,
       },
       projects: {
         header: 'Projectos', // 🛠 

@@ -1,7 +1,6 @@
 <template>
   <div>
     <Hero />
-    <!-- <Carousel /> -->
     <Projects :projectsByTechs="projectsByTechs" />
     <DevBoard :user="$config.social.codestats"/>
   </div>
@@ -9,8 +8,7 @@
 
 <script>
 import Hero from '~/components/home/Hero.vue'
-import DevBoard from '~/components/stats/DevBoard.vue';
-import Carousel from '~/components/home/Carousel.vue';
+import DevBoard from '~/components/devboard/DevBoard.vue';
 import Projects from '~/components/home/Projects.vue';
 
 const ALL = 'all'
@@ -43,7 +41,7 @@ export default {
         projects
       }
     },
-    components: { DevBoard, Hero, Carousel, Projects }
+    components: { DevBoard, Hero, Projects }
 }
 </script>
 

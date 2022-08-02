@@ -7,8 +7,8 @@
 
 <script>
 
-import DevBoard from '~/components/stats/DevBoard.vue';
-import Activity from '~/components/stats/Activity.vue';
+import DevBoard from '~/components/devboard/DevBoard.vue';
+import Activity from '~/components/devboard/Activity.vue';
 
 export default {
     components: { DevBoard, Activity }
