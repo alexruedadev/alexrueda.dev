@@ -3,7 +3,7 @@
 export default {
   name: 'Álex Rueda',
   domain: 'alexrueda.dev', // add without https:// , used in meta tags and share urls
-  image: '/images/levels/12.gif',
+  image: '/images/levels/14.gif',
   email: 'me@alexrueda.dev',
   googleAnalyticsV4: {
     enabled: false,
@@ -171,14 +171,14 @@ export default {
     enabled: true,
     info: `Datos recogidos por codestats.net. </br>Medidos en VS Code. </br>Para más información visita: <a href="https://codestats.net/alexdiple" target="_blank">https://codestats.net/alexdiple</a>`,
     meta: [
-      {title: 'OS', value: 'Windows 11', extra:'', img: '/images/pixelart/monitor.png'},
-      {title: 'Memory', value: '32 GB 5200 MHz DDR5', img: '/images/pixelart/monitor.png'},
+      {title: 'OS', value: 'Windows 11', extra:'', img: '/images/pixelart/os.png'},
+      {title: 'RAM Memory', value: '32 GB 5200 MHz DDR5', img: '/images/pixelart/memoryRam2.png'},
       {title: 'Keyboard', value: 'Logitech G915 TKL', extra:'Wireless Lightspeed', img: '/images/pixelart/keyboard.png'},
       {title: 'Mouse', value: 'Logitech G703', extra: 'Wireless Lightspeed', img: '/images/pixelart/mouse.png'},
       {title: 'Monitor', value: 'Lenovo QHD', extra: '(2560 x 1440) 24 Inch IPS Display', img: '/images/pixelart/monitor.png'},
       {title: 'Laptop', value: 'Notebook HP Envy', extra: 'Intel i7 - Nvidia', img: '/images/pixelart/laptop.png'},
-      {title: 'Headphones', value: 'Beats SOLO 3', extra: 'Wireless', img: '/images/pixelart/monitor.png'},
-      {title: 'Microphone', value: 'BC Master', extra: '??', img: '/images/pixelart/monitor.png'}
+      {title: 'Headphones', value: 'Beats SOLO 3', extra: 'Wireless', img: '/images/pixelart/headphones.png'},
+      {title: 'Microphone', value: 'BC Master', extra: '??', img: '/images/pixelart/microphone.png'}
     ]
   },
   recommendations: {

@@ -1,5 +1,5 @@
 <template>
-    <div data-aos="zoom-in" class="max-w-5xl md:mx-auto mx-5 font-playmegames">
+    <div data-aos="zoom-in" class="max-w-5xl md:mx-auto mx-5 font-playmegames pt-10">
         <div class="lg:col-span-6 text-center lg:text-left">
 
         <!-- today activity -->

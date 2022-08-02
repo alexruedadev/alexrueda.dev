@@ -24,7 +24,7 @@
         <VueSlickCarousel ref="carousel" v-bind="settings" class="max-w-5xl mx-auto font-playmegames text-center">
             <div v-for="(item, index) in equipement" class="dark:bg-gray-900 p-2 border-2 border-gray-800 dark:hover:bg-gray-700 cursor-grab">
                 <div class="flex">
-                    <img :src="item.img" class="w-10 mx-auto m-2" alt="">
+                    <img :src="item.img" class="md:w-12 w-14 mx-auto m-2" alt="">
                 </div>
                     <div class="font-medium text-gray-500">
                         {{ item.title }}
