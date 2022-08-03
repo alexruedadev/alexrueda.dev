@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-5xl mx-auto lg:p-0 sm:p-10 p-5">
+  <div id="section" class="max-w-5xl mx-auto lg:p-0 sm:p-10 p-5">
         <div data-aos="zoom-in" id="liner" class="p-3 font-playmegames flex border-b-2 border-gray-400">
         <h2 class="text-3xl mx-auto md:mx-10 tracking-wide flex">
             <p class="text-gray-200">Dev</p>
